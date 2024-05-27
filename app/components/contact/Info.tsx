@@ -1,5 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
+import Link from 'next/link'
 
 export default function Info() {
   return (
@@ -57,41 +58,49 @@ export default function Info() {
         </div>
         
         <div className='flex gap-[15px]'>
-            <figure>
-                <Image 
-                    src={'/ig.svg'}
-                    alt='instagram logo'
-                    width={24}
-                    height={24}
-                />
-            </figure>
+            <Link href={'#'}>
+                <figure className='hover:translate-y-1 transition-all duration-300'>
+                    <Image 
+                        src={'/ig.svg'}
+                        alt='instagram logo'
+                        width={24}
+                        height={24}
+                    />
+                </figure>
+            </Link>
             
-            <figure>
-                <Image 
-                    src={'/fb.svg'}
-                    alt='instagram logo'
-                    width={24}
-                    height={24}
-                />
-            </figure>
+            <Link href={'#'}>
+                <figure className='hover:translate-y-1 transition-all duration-300'>
+                    <Image 
+                        src={'/fb.svg'}
+                        alt='instagram logo'
+                        width={24}
+                        height={24}
+                    />
+                </figure>
+            </Link>
             
-            <figure>
-                <Image 
-                    src={'/dribble.svg'}
-                    alt='instagram logo'
-                    width={24}
-                    height={24}
-                />
-            </figure>
+            <Link href={'#'}>
+                <figure className='hover:translate-y-1 transition-all duration-300'>
+                    <Image 
+                        src={'/dribble.svg'}
+                        alt='instagram logo'
+                        width={24}
+                        height={24}
+                    />
+                </figure>
+            </Link>
             
-            <figure>
-                <Image 
-                    src={'/tw.svg'}
-                    alt='instagram logo'
-                    width={24}
-                    height={24}
-                />
-            </figure>
+            <Link href={'#'}>
+                <figure className='hover:translate-y-1 transition-all duration-300'>
+                    <Image 
+                        src={'/tw.svg'}
+                        alt='instagram logo'
+                        width={24}
+                        height={24}
+                    />
+                </figure>
+            </Link>
         </div>
     </div>
   )

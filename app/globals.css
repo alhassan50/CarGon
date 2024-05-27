@@ -36,7 +36,7 @@ a, img {
   }
   
   .input-section input, textarea {
-    @apply px-[20px] py-[12px] text-[#545454] mb-[10px] md:text-lg
+    @apply px-[20px] py-[12px] text-[#545454] mb-[10px] md:text-lg outline-1 outline-primaryBlue
   }
   
   textarea {
