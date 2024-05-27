@@ -6,6 +6,28 @@ a, img {
   display: block;
 }
 
+.navbar-links {
+  position: relative;
+}
+
+.navbar-links::after {
+  content: '';
+  height: 2px;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: #282dad;
+  transform: scaleX(0);
+  transform-origin: bottom left;
+  transition: transform 0.5s ease-out;
+}
+
+.group:hover .navbar-links::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
 @layer utilities {
   h1, h2, h3, h4, h5, h6, p {
     @apply leading-tight text-primaryBlack

@@ -59,12 +59,12 @@ export default function Navbar() {
 
     const renderMenuItems = MENU_ITEMS.map(item => (
         <li 
-            className={`${item.to &&'my-[10px]'} text-lg hover:text-[#282dad] transition-all`}
+            className={`${item.to &&'my-[10px]'} group text-lg hover:text-[#282dad] transition-all`}
             key={item.to}
         >
             {
                 item.to ?
-                <Link className='pb-[3px] max-w-full' href={item.to}>
+                <Link className='pb-[3px] navbar-links max-w-full' href={item.to}>
                     {item.title}
                 </Link>
                 :
