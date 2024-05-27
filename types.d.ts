@@ -6,3 +6,10 @@ type MenuItem = {
     isDropDown: boolean,
     dropdownItems?: MenuItem[]
 }
+
+type PageList = PageItem[]
+
+type PageItem = {
+    title: string,
+    to: string
+}
