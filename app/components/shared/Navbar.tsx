@@ -7,6 +7,7 @@ import Link from 'next/link'
 //icons
 import { CgMenu } from "react-icons/cg";
 import { MdOutlineKeyboardArrowDown } from "react-icons/md";
+import Logo from './Logo';
 
 //data
 const MENU_ITEMS: MenuItems = [
@@ -101,17 +102,7 @@ export default function Navbar() {
     <div className='relative'>
         <div className='py-[10px] md:pt-[30px] sm-lg:pt-[40px] sm-lg:pb-[20px] bg-white'>
             <div className='flex justify-between items-center px-[15px] md:px-[30px] xl:px-[5%]'>
-                <Link href={'/'}>
-                    <figure className='w-[160px] h-[30px] pl-[10px] md:pl-0 sm-lg:w-[202px] sm-lg:h-auto'>
-                        <Image 
-                            src={'/cargon_nav_logo.svg'}
-                            alt='cargon logo'
-                            width={219}
-                            height={41}
-                            className=''
-                        />
-                    </figure>
-                </Link>
+                <Logo theme='dark' />
 
                 <nav className='hidden sm-lg:block'>
                     <ul className='flex items-center justify-center gap-[30px]'>
