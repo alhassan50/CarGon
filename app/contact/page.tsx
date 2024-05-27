@@ -1,7 +1,10 @@
 import React from 'react'
+import ContactHero from '../components/contact/ContactHero'
 
 export default function Contact() {
   return (
-    <div>contact page</div>
+    <main className='contact-page'>
+        <ContactHero />
+    </main>
   )
 }

@@ -16,6 +16,10 @@ const config: Config = {
       screens: {
         "xsm": "480px",
         'sm-lg': '990px'
+      },
+      colors: {
+        primaryBlue: '#282dad',
+        primaryBlack: '#18192e'
       }
     },
   },

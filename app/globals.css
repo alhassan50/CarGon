@@ -6,6 +6,8 @@ a, img {
   display: block;
 }
 
+
+
 /* :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
@@ -29,10 +31,22 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
+*/
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply leading-tight
+  }
+  
+  main {
+    @apply px-[15px] md:px-[20px] sm-lg:px-[30px] lg:px-[50px]
+  }
+
+  h1 {
+    @apply text-[41px] font-semibold xsm:text-[48px] md:text-[58px] lg:text-[62px]
+  }
 }
- */
