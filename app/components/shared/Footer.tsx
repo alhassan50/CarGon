@@ -40,7 +40,7 @@ export default function Footer() {
             <div className='grid gap-[50px] md-lg:grid-cols-[1.75fr,1fr]'>
                 <div>
                     <Logo theme='light' />
-                    <div className='grid gap-[20px] md:grid-cols-3 mt-[30px] md:mt-[70px]'>
+                    <div className='grid gap-[20px] md:grid-cols-3 mt-[30px] md:mt-[70px] mb-[90px]'>
                         <div>
                             <h4 className='text-[20px] text-white mb-[20px] font-semibold'>Pages</h4>
                             <ul className='grid gap-[15px]'>
@@ -100,6 +100,15 @@ export default function Footer() {
                                 </ul>
                             </div>
                         </div>
+                    </div>
+
+                    <div>
+                        <h4 className='text-base text-white mb-[20px] font-medium'>
+                            Developed by Alhassan,&nbsp;
+                            <Link href={'https://github.com/alhassan50/cargon'} target='_blank' className='inline underline'>
+                               View Source Code
+                            </Link>
+                        </h4>
                     </div>
                 </div>
 
