@@ -2,10 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-a, img {
-  display: block;
-}
-
 .navbar-links {
   position: relative;
 }
@@ -35,6 +31,10 @@ a, img {
   
   main {
     @apply px-[15px] md:px-[20px] sm-lg:px-[30px] lg:px-[50px] x-lg:px-[70px]
+  }
+
+  a, img {
+    @apply block;
   }
 
   h1 {

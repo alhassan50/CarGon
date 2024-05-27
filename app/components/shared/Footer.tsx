@@ -105,7 +105,7 @@ export default function Footer() {
 
                 <div>
                     <div className='mb-[60px] '>
-                        <h1 className='text-white mb-[30px] leading-none md:text-[52px] lg:text-[52px]'> 
+                        <h1 className='text-white mb-[30px] leading-none text-[30px] xsm:text-[40px] sm:text-[48px] md:text-[52px] lg:text-[52px]'> 
                             We ship worldwide.
                             Ready to ship with us?
                         </h1>
