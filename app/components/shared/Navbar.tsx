@@ -28,6 +28,19 @@ const MENU_ITEMS: MenuItems = [
     {
       title: 'Pages',
       isDropDown: true,
+      dropdownItems: [
+        { title: 'Home', to: '/', isDropDown: false },
+        { title: 'About', to: '/about', isDropDown: false },
+        { title: 'Services', to: '/services', isDropDown: false },
+        { title: 'Service Details', to: '/service-details', isDropDown: false },
+        { title: 'Pricing', to: '/pricing', isDropDown: false },
+        { title: 'Team', to: '/team', isDropDown: false },
+        { title: 'Blog', to: '/blog', isDropDown: false },
+        { title: 'Contact', to: '/contact', isDropDown: false },
+        { title: 'FAQs', to: '/faqs', isDropDown: false },
+        { title: 'Request a Quote', to: '/request-a-quote', isDropDown: false },
+        { title: 'Privacy Policy', to: '/privacy-policy', isDropDown: false },
+      ],
     },
 ];
 
@@ -42,6 +55,47 @@ export default function Navbar() {
         console.log("isNavLinksVisible: ", isNavLinksVisible)
         console.log(MENU_ITEMS)
     }, [isNavLinksVisible])
+
+    const renderMenuItems = MENU_ITEMS.map(item => (
+        <li 
+            className={`${item.to &&'my-[10px]'} text-lg hover:text-[#282dad] transition-all`}
+            key={item.to}
+        >
+            {
+                item.to ?
+                <Link className='pb-[3px] max-w-full' href={item.to}>
+                    {item.title}
+                </Link>
+                :
+                <div className=' relative pb-[3px] max-w-full flex flex-col justify-between items-start gap-1 group'>
+                    <div className='flex gap-1 justify-between w-full'>
+                        {item.title}
+                        <MdOutlineKeyboardArrowDown className='text-[24px]' />
+                    </div>
+                    <div className='sm-lg:absolute top-full left-0 min-w-full bg-[#282dad] py-2 px-5 hidden group-hover:block border border-[#18192e]'>
+                        <ul> 
+                            {item.dropdownItems?.map(dropdownItem => (
+                                <li 
+                                    className='text-white h-full'
+                                    key={dropdownItem.to} 
+                                >
+                                    {
+                                        dropdownItem.to &&
+                                        <Link 
+                                            href={dropdownItem.to} 
+                                            className='whitespace-nowrap py-1'
+                                        >
+                                            {dropdownItem.title}
+                                        </Link>
+                                    }
+                                </li>
+                            ))}
+                        </ul>
+                    </div>
+                </div>
+            }
+        </li>
+    ))
 
   return (
     <div className='relative'>
@@ -61,24 +115,7 @@ export default function Navbar() {
 
                 <nav className='hidden sm-lg:block'>
                     <ul className='flex items-center justify-center gap-[30px]'>
-                        {MENU_ITEMS.map(item => (
-                            <li 
-                                className='my-[10px] text-lg hover:text-[#282dad] transition-all'
-                                key={item.to}
-                            >
-                                {
-                                    item.to ?
-                                    <Link className='pb-[3px] max-w-full' href={item.to}>
-                                        {item.title}
-                                    </Link>
-                                    :
-                                    <div className='pb-[3px] max-w-full flex justify-between items-center gap-1'>
-                                        {item.title}
-                                        <MdOutlineKeyboardArrowDown className='text-[24px]' />
-                                    </div>
-                                }
-                            </li>
-                        ))}
+                        {renderMenuItems}
                     </ul>
                 </nav>
 
@@ -101,38 +138,14 @@ export default function Navbar() {
             isNavLinksVisible &&
             <>
                 <div 
-                    className='absolute top-0 left-0 w-full h-screen -z-10'
+                    className='absolute top-0 left-0 w-full h-screen -z-10 sm-lg:hidden'
                     onClick={toggleNavLinksVisibility}
                 >
                 </div>
                 
-                <nav className='absolute w-full'>
+                <nav className='absolute w-full sm-lg:hidden'>
                     <ul className='w-[93%] mx-[auto] top-16 left-0 p-[20px] pt-[10px] bg-[#f6f6f6] border border-[#b9b9b9]'>
-                        <li className='my-[10px] text-lg'>
-                            <Link className='pb-[3px] max-w-full' href={'/'}>
-                                Home
-                            </Link>
-                        </li>
-                        
-                        <li className='my-[10px] text-lg'>
-                            <Link className='pb-[3px] max-w-full' href={'/about'}>
-                                About
-                            </Link>
-                        </li>
-                        
-                        <li className='my-[10px] text-lg'>
-                            <Link className='pb-[3px] max-w-full' href={'/contact'}>
-                                Contact
-                            </Link>
-                        </li>
-                        
-                        <li className='text-lg'>
-                            <div className='pb-[3px] max-w-full flex justify-between items-center gap-4'>
-                                Pages
-                                <MdOutlineKeyboardArrowDown className='text-[24px]' />
-                            </div>
-
-                        </li>
+                        {renderMenuItems}
                     </ul>
                 </nav>
             </>
