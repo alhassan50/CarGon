@@ -28,6 +28,10 @@
   h1, h2, h3, h4, h5, h6, p {
     @apply leading-tight text-primaryBlack
   }
+
+  p {
+    @apply text-[#545454] font-normal
+  }
   
   main {
     @apply px-[15px] md:px-[20px] sm-lg:px-[30px] lg:px-[50px] x-lg:px-[70px]

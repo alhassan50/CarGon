@@ -36,27 +36,27 @@ const renderSocialIcons = SOCIAL_ICONS.map(icon => (
 export default function Footer() {
   return (
     <footer className='bg-[#18192e] text-[#b9b9b9] pt-[90px] pb-[40px]'>
-        <div className='mx-[15px] md:mx-[30px] lg:mx-[50px]'>
+        <div className='mx-[15px] md:mx-[30px] lg:mx-[50px] x-lg:mx-[70px]'>
             <div className='grid gap-[50px] md-lg:grid-cols-[1.75fr,1fr]'>
                 <div>
                     <Logo theme='light' />
-                    <div className='grid gap-[20px] md:grid-cols-3 mt-[30px]'>
+                    <div className='grid gap-[20px] md:grid-cols-3 mt-[30px] md:mt-[70px]'>
                         <div>
-                            <h4 className='text-[20px] text-white mb-[20px]'>Pages</h4>
+                            <h4 className='text-[20px] text-white mb-[20px] font-semibold'>Pages</h4>
                             <ul className='grid gap-[15px]'>
                                 {renderFooterLinks(MAIN_PAGES)}
                             </ul>
                         </div>
                         
                         <div>
-                            <h4 className='text-[20px] text-white mb-[20px]'>Utility Pages</h4>
+                            <h4 className='text-[20px] text-white mb-[20px] font-semibold'>Utility Pages</h4>
                             <ul className='grid gap-[15px]'>
                                 {renderFooterLinks(UTIL_PAGES)}
                             </ul>
                         </div>
                         
                         <div>
-                            <h4 className='text-[20px] text-white mb-[20px]'>Contact info</h4>
+                            <h4 className='text-[20px] text-white mb-[20px] font-semibold'>Contact info</h4>
                             
                             <div className='mb-[60px] grid gap-5'>
                                 <div className='flex gap-2 items-start'>
@@ -93,7 +93,7 @@ export default function Footer() {
                             </div>
 
                             <div>
-                                <h4 className='text-[20px] text-white mb-[20px]'>Follow us on</h4>
+                                <h4 className='text-[20px] text-white mb-[20px] font-semibold'>Follow us on</h4>
 
                                 <ul className='flex gap-[15px]'>
                                     {renderSocialIcons}
@@ -105,7 +105,7 @@ export default function Footer() {
 
                 <div>
                     <div className='mb-[60px] '>
-                        <h1 className='text-white mb-[30px] leading-none text-[30px] xsm:text-[40px] sm:text-[48px] md:text-[52px] lg:text-[52px]'> 
+                        <h1 className='text-white mb-[30px] leading-tight text-[30px] xsm:text-[40px] sm:text-[48px] md:text-[52px] lg:text-[55px]'> 
                             We ship worldwide.
                             Ready to ship with us?
                         </h1>

@@ -6,7 +6,7 @@ export default function Info() {
   return (
     <div className='grid gap-[30px]'>
         <div>
-            <h2>
+            <h2 className='mb-[10px]'>
                 Need any help?
             </h2>
 
@@ -16,7 +16,7 @@ export default function Info() {
         </div>
         
         <div>
-            <h4 className='mb-[10px]'>
+            <h4 className='mb-[10px] font-[600]'>
                 Opening Hours
             </h4>
 
@@ -30,7 +30,7 @@ export default function Info() {
         </div>
         
         <div>
-            <h4 className='mb-[10px]'>
+            <h4 className='mb-[10px] font-[600]'>
                 Address
             </h4>
 
@@ -44,7 +44,7 @@ export default function Info() {
         </div>
         
         <div>
-            <h4 className='mb-[10px]'>
+            <h4 className='mb-[10px] font-[600]'>
                 Address
             </h4>
 
