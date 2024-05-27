@@ -4,7 +4,7 @@ export default function ContactHero() {
   return (
     <section className='contact-hero py-[30px] xsm:py-[40px] md:py-[50px] sm-lg:py-[90px]'>
         <div className='text-center max-w-[1200px] mx-auto'>
-            <h1 className='leading-tight text-primaryBlack mb-[10px]'>
+            <h1 className='leading-tight mb-[10px]'>
                 Get in touch for&nbsp;
                 <span className='text-primaryBlue'>
                     logistics

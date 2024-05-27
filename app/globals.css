@@ -38,15 +38,39 @@ body {
     text-wrap: balance;
   }
 
-  h1, h2, h3, h4, h5, h6 {
-    @apply leading-tight
+  h1, h2, h3, h4, h5, h6, p {
+    @apply leading-tight text-primaryBlack
   }
   
   main {
-    @apply px-[15px] md:px-[20px] sm-lg:px-[30px] lg:px-[50px]
+    @apply px-[15px] md:px-[20px] sm-lg:px-[30px] lg:px-[50px] x-lg:px-[70px]
   }
 
   h1 {
     @apply text-[41px] font-semibold xsm:text-[48px] md:text-[58px] lg:text-[62px]
+  }
+  
+  h2 {
+    @apply text-[30px] font-semibold xsm:text-[36px] md:text-[42px]
+  }
+  
+  h4 {
+    @apply text-[18px] font-medium xsm:text-[20px] md:text-[24px]
+  }
+
+  .input-section {
+    @apply flex flex-col mb-[20px] 
+  }
+  
+  .input-section label {
+    @apply mb-[5px] text-[#545454] md:text-lg
+  }
+  
+  .input-section input, textarea {
+    @apply px-[20px] py-[12px] text-[#545454] mb-[10px] md:text-lg
+  }
+  
+  textarea {
+    @apply px-[20px] py-[12px] text-[#545454] md:text-lg
   }
 }

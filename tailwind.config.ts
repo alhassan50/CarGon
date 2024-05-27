@@ -15,7 +15,8 @@ const config: Config = {
       },
       screens: {
         "xsm": "480px",
-        'sm-lg': '990px'
+        'sm-lg': '990px',
+        'x-lg': '1440px'
       },
       colors: {
         primaryBlue: '#282dad',
