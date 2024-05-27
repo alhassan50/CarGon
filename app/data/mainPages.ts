@@ -1,4 +1,4 @@
-export const MAIN_PAGES = [
+export const MAIN_PAGES: PageList = [
     {
         title: 'Home',
         to: '/',

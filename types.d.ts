@@ -1,5 +1,3 @@
-type MenuItems = MenuItem[]
-
 type MenuItem = {
     title: string,
     to?: string,
@@ -7,9 +5,23 @@ type MenuItem = {
     dropdownItems?: MenuItem[]
 }
 
-type PageList = PageItem[]
+type MenuItems = MenuItem[]
 
+
+///////////////////////////////////
 type PageItem = {
     title: string,
     to: string
 }
+
+type PageList = PageItem[]
+
+
+////////////////////////////
+type SocialItem = {
+    src: string,
+    to: string,
+    alt: string,
+}
+
+type SocialItemsList = SocialItem[]

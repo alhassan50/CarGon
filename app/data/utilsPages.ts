@@ -1,4 +1,4 @@
-export const UTIL_PAGES = [
+export const UTIL_PAGES: PageList = [
     {
         title: 'Style Guide',
         to: '/style-guide',

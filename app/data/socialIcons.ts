@@ -1,4 +1,4 @@
-export const SOCIAL_ICONS = [
+export const SOCIAL_ICONS: SocialItemsList = [
     {
       src: '/dark-fb.svg',
       to: '#',
