@@ -8,6 +8,29 @@ import Link from 'next/link'
 import { CgMenu } from "react-icons/cg";
 import { MdOutlineKeyboardArrowDown } from "react-icons/md";
 
+//data
+const MENU_ITEMS: MenuItems = [
+    {
+      title: 'Home',
+      to: '/',
+      isDropDown: false,
+    },
+    {
+      title: 'About',
+      to: '/about',
+      isDropDown: false,
+    },
+    {
+      title: 'Contact',
+      to: '/contact',
+      isDropDown: false,
+    },
+    {
+      title: 'Pages',
+      isDropDown: true,
+    },
+];
+
 export default function Navbar() {
     const [isNavLinksVisible, setIsNavLinksVisible] = useState(false)
 
@@ -17,6 +40,7 @@ export default function Navbar() {
 
     useEffect(() => {
         console.log("isNavLinksVisible: ", isNavLinksVisible)
+        console.log(MENU_ITEMS)
     }, [isNavLinksVisible])
 
   return (
@@ -37,31 +61,24 @@ export default function Navbar() {
 
                 <nav className='hidden sm-lg:block'>
                     <ul className='flex items-center justify-center gap-[30px]'>
-                        <li className='my-[10px] text-lg hover:text-[#282dad] transition-all'>
-                            <Link className='pb-[3px] max-w-full' href={'/'}>
-                                Home
-                            </Link>
-                        </li>
-                        
-                        <li className='my-[10px] text-lg'>
-                            <Link className='pb-[3px] max-w-full' href={'/about'}>
-                                About
-                            </Link>
-                        </li>
-                        
-                        <li className='my-[10px] text-lg'>
-                            <Link className='pb-[3px] max-w-full' href={'/contact'}>
-                                Contact
-                            </Link>
-                        </li>
-                        
-                        <li className='text-lg'>
-                            <div className='pb-[3px] max-w-full flex justify-between items-center gap-1'>
-                                Pages
-                                <MdOutlineKeyboardArrowDown className='text-[24px]' />
-                            </div>
-
-                        </li>
+                        {MENU_ITEMS.map(item => (
+                            <li 
+                                className='my-[10px] text-lg hover:text-[#282dad] transition-all'
+                                key={item.to}
+                            >
+                                {
+                                    item.to ?
+                                    <Link className='pb-[3px] max-w-full' href={item.to}>
+                                        {item.title}
+                                    </Link>
+                                    :
+                                    <div className='pb-[3px] max-w-full flex justify-between items-center gap-1'>
+                                        {item.title}
+                                        <MdOutlineKeyboardArrowDown className='text-[24px]' />
+                                    </div>
+                                }
+                            </li>
+                        ))}
                     </ul>
                 </nav>
 
