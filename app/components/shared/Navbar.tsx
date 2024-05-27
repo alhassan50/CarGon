@@ -1,7 +1,6 @@
 'use client'
 
 import React, { useEffect, useState } from 'react'
-import Image from 'next/image'
 import Link from 'next/link'
 
 //icons
@@ -10,40 +9,7 @@ import { MdOutlineKeyboardArrowDown } from "react-icons/md";
 import Logo from './Logo';
 
 //data
-const MENU_ITEMS: MenuItems = [
-    {
-      title: 'Home',
-      to: '/',
-      isDropDown: false,
-    },
-    {
-      title: 'About',
-      to: '/about',
-      isDropDown: false,
-    },
-    {
-      title: 'Contact',
-      to: '/contact',
-      isDropDown: false,
-    },
-    {
-      title: 'Pages',
-      isDropDown: true,
-      dropdownItems: [
-        { title: 'Home', to: '/', isDropDown: false },
-        { title: 'About', to: '/about', isDropDown: false },
-        { title: 'Services', to: '/services', isDropDown: false },
-        { title: 'Service Details', to: '/service-details', isDropDown: false },
-        { title: 'Pricing', to: '/pricing', isDropDown: false },
-        { title: 'Team', to: '/team', isDropDown: false },
-        { title: 'Blog', to: '/blog', isDropDown: false },
-        { title: 'Contact', to: '/contact', isDropDown: false },
-        { title: 'FAQs', to: '/faqs', isDropDown: false },
-        { title: 'Request a Quote', to: '/request-a-quote', isDropDown: false },
-        { title: 'Privacy Policy', to: '/privacy-policy', isDropDown: false },
-      ],
-    },
-];
+import { MENU_ITEMS } from '@/app/data/menuitems';
 
 export default function Navbar() {
     const [isNavLinksVisible, setIsNavLinksVisible] = useState(false)
@@ -51,11 +17,6 @@ export default function Navbar() {
     const toggleNavLinksVisibility = ():void => {
         setIsNavLinksVisible(prevValue => !prevValue)
     }
-
-    useEffect(() => {
-        console.log("isNavLinksVisible: ", isNavLinksVisible)
-        console.log(MENU_ITEMS)
-    }, [isNavLinksVisible])
 
     const renderMenuItems = MENU_ITEMS.map(item => (
         <li 
