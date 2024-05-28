@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
-import { Poppins, Instrument_Sans } from "next/font/google";
+import {Instrument_Sans } from "next/font/google";
 import "./globals.css";
 
 //components
 import Navbar from "./components/shared/Navbar";
 import Footer from "./components/shared/Footer";
 
-const poppins = Instrument_Sans({ subsets: ["latin"], weight: ["400", "500", "600", "700"] });
+const instrumentSans = Instrument_Sans({ subsets: ["latin"], weight: ["400", "500", "600", "700"] });
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -20,7 +20,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={poppins.className}>
+      <body className={instrumentSans.className}>
         <Navbar />
         {children}
         <Footer />

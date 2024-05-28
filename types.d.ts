@@ -25,3 +25,13 @@ type SocialItem = {
 }
 
 type SocialItemsList = SocialItem[]
+
+
+/////////////////////////////
+type Value = {
+    title: string,
+    desc: string,
+    image: string
+}
+
+type ValueList = Value[]
