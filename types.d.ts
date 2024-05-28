@@ -54,3 +54,14 @@ type Stat = {
 }
 
 type StatList = Stat[]
+
+
+
+/////////////////////////////
+type Member = {
+    name: string;
+    role: string;
+    image: string;
+}
+
+type MembersList = Member[]
