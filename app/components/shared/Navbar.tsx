@@ -29,8 +29,8 @@ export default function Navbar() {
             {
                 item.to ?
                 <Link 
-                    className={`pb-[3px] navbar-links max-w-full ${pathname.startsWith(item.to) && 'active-link'}`} 
-                    href={item.to === 'root' ? '/' : item.to}
+                    className={`pb-[3px] navbar-links max-w-full ${item.to === pathname ? 'active-link' : null}`} 
+                    href={item.to}
                 >
                     {item.title}
                 </Link>
