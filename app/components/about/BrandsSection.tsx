@@ -20,7 +20,7 @@ export default function BrandsSection() {
                 Trusted by the world&apos;s best brands
             </h2>
         </div>
-        <ul className='grid gap-[20px] grid-cols-2 sm-lg:grid-cols-3 lg:grid-cols-4'>
+        <ul className='grid gap-[20px]  grid-cols-1 sm:grid-cols-2 sm-lg:grid-cols-3 lg:grid-cols-4'>
             {renderBrandCards}
         </ul>
     </section>
