@@ -65,3 +65,14 @@ type Member = {
 }
 
 type MembersList = Member[]
+
+
+
+/////////////////////////////
+type Service = {
+    title: string;
+    desc: string;
+    image: string;
+}
+
+type ServiceList = Service[]

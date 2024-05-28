@@ -1,7 +1,9 @@
-import Image from "next/image";
+import ServicesSection from "./components/home/ServicesSection";
 
 export default function Home() {
   return (
-    <main>hello from home</main>
+    <main>
+      <ServicesSection />
+    </main>
   );
 }
