@@ -35,3 +35,13 @@ type Value = {
 }
 
 type ValueList = Value[]
+
+/////////////////////////////
+type Brand = {
+    brand: string;
+    image: string;
+    width: number;
+    height: number;
+}
+
+type BrandList = Brand[]
