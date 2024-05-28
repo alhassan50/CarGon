@@ -1,4 +1,5 @@
 import React from 'react'
+import Image from 'next/image';
 
 //components
 import AboutHero from '../components/about/AboutHero'
@@ -11,7 +12,6 @@ export default function About() {
         <AboutHero />
         <ValuesSection />
         <BrandsSection />
-        
     </main>
   )
 }

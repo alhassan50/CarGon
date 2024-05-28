@@ -45,3 +45,12 @@ type Brand = {
 }
 
 type BrandList = Brand[]
+
+
+/////////////////////////////
+type Stat = {
+    category: string;
+    value: string;
+}
+
+type StatList = Stat[]
