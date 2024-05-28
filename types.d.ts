@@ -76,3 +76,13 @@ type Service = {
 }
 
 type ServiceList = Service[]
+
+
+/////////////////////////////
+type Blog = {
+    date: string;
+    title: string;
+    image: string
+}
+
+type BlogList = Blog[]
