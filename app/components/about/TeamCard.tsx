@@ -1,7 +1,7 @@
 import React from 'react'
 import Image from 'next/image';
 
-export default function TeamCard({member}) {
+export default function TeamCard({member} : {member: Member}) {
   return (
     <div>
         <figure className='relative'>
