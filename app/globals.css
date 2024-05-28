@@ -16,10 +16,10 @@
   background-color: #282dad;
   transform: scaleX(0);
   transform-origin: bottom left;
-  transition: transform 0.5s ease-out;
+  transition: transform 0.3s ease-out;
 }
 
-.group:hover .navbar-links::after {
+.group:hover .navbar-links::after, .active-link::after {
   transform: scaleX(1);
   transform-origin: bottom left;
 }
@@ -67,5 +67,9 @@
   
   textarea {
     @apply px-[20px] py-[12px] text-[#545454] md:text-lg
+  }
+
+  .active-link {
+    @apply text-primaryBlue
   }
 }

@@ -1,7 +1,7 @@
 export const MENU_ITEMS: MenuItems = [
     {
       title: 'Home',
-      to: '/',
+      to: 'root',
       isDropDown: false,
     },
     {

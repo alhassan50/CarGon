@@ -10,22 +10,28 @@ import Logo from './Logo';
 
 //data
 import { MENU_ITEMS } from '@/app/data/menuitems';
+import { usePathname } from 'next/navigation';
 
 export default function Navbar() {
     const [isNavLinksVisible, setIsNavLinksVisible] = useState(false)
+    const pathname = usePathname()
 
     const toggleNavLinksVisibility = ():void => {
         setIsNavLinksVisible(prevValue => !prevValue)
     }
 
+
     const renderMenuItems = MENU_ITEMS.map(item => (
         <li 
-            className={`${item.to &&'my-[10px]'} group text-lg hover:text-[#282dad] transition-all`}
+            className={`${item.to &&'my-[10px]'} group text-lg hover:text-[#282dad] transition-all duration-300`}
             key={item.to}
         >
             {
                 item.to ?
-                <Link className='pb-[3px] navbar-links max-w-full' href={item.to}>
+                <Link 
+                    className={`pb-[3px] navbar-links max-w-full ${pathname.startsWith(item.to) && 'active-link'}`} 
+                    href={item.to === 'root' ? '/' : item.to}
+                >
                     {item.title}
                 </Link>
                 :
