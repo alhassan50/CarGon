@@ -14,7 +14,7 @@ const renderBlogs = BLOGS.map(blog => (
 
 export default function Blog() {
   return (
-    <section className='max-w-[1280px] mx-auto pb-[50px] md:pb-[70px] lg:pb-[100px]'>
+    <section className='max-w-[1280px] mx-auto py-[50px] md:py-[70px] lg:py-[100px]'>
         <div className='mb-[50px]'>
             <h2 className='text-center mb-[10px] text-[36px] xsm:text-[40x] md:text-[48px] xl:text-[52px]'>
                 Our latest blog
