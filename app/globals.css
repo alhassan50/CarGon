@@ -24,6 +24,10 @@
   transform-origin: bottom left;
 }
 
+.hero-span-image {
+  background-image: url('/logspan.jpg');
+}
+
 @layer utilities {
   h1, h2, h3, h4, h5, h6, p {
     @apply leading-tight text-primaryBlack
@@ -61,7 +65,7 @@
     @apply mb-[5px] text-[#545454] md:text-lg
   }
   
-  .input-section input, textarea {
+  input, textarea {
     @apply px-[20px] py-[12px] text-[#545454] mb-[10px] md:text-lg outline-1 outline-primaryBlue
   }
   
