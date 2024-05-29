@@ -153,7 +153,7 @@ export default function HeroSection() {
             </div>
         </div>
         
-        <div className='mb-[30px] relative'>
+        <div className='mb-[30px] relative px-[15px] md:px-[20px] sm-lg:px-[30px] lg:px-[50px] x-lg:px-[70px]'>
             <div className='sm-lg:max-w-[70%] sm-lg:ml-auto'>
                 <h4 className='mb-[10px] sm-lg:text-white'>
                     Transportation Company
