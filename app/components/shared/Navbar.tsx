@@ -23,8 +23,8 @@ export default function Navbar() {
 
     const renderMenuItems = MENU_ITEMS.map(item => (
         <li 
-            className={`${item.to &&'my-[10px]'} group text-lg hover:text-[#282dad] transition-all duration-300`}
             key={item.to}
+            className={`${item.to &&'my-[10px]'} group text-lg hover:text-[#282dad] transition-all duration-300`}
         >
             {
                 item.to ?
