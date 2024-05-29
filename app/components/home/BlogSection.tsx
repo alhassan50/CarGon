@@ -3,7 +3,7 @@ import BlogCard from './BlogCard'
 
 import {BLOGS} from '@/app/data/blog'
 
-const renderBlogs = BLOGS.map(blog => (
+const renderBlogs = [...BLOGS].slice(0,3).map(blog => (
     <li
         key={blog.title} 
         className=''

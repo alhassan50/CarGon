@@ -1,4 +1,4 @@
-import Blog from "./components/home/Blog";
+import BlogSection from "./components/home/BlogSection";
 import HeroSection from "./components/home/HeroSection";
 import HowItWorks from "./components/home/HowItWorks";
 import Mission from "./components/home/Mission";
@@ -11,7 +11,7 @@ export default function Home() {
       <ServicesSection />
       <Mission />
       <HowItWorks />
-      <Blog />
+      <BlogSection />
     </main>
   );
 }
