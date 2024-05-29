@@ -37,25 +37,25 @@ const TRANSPORTATION_COMPANY_DATA = [
 
 export default function HeroSection() {
   return (
-    <section className=' mx-auto pb-[0px] md:pb-[90px] pt-[50px]'>
-        <div className='grid sm-lg:grid-cols-2 gap-[40px] xl:[70px] justify-center mb-5 xsm:mb-[40px] sm-lg:mb-[50px]'>
+    <section className='relative mx-auto pb-[0px] md:pb-[90px] pt-[50px] -mx-[15px] md:-mx-[20px] sm-lg:-mx-[30px] lg:-mx-[50px] x-lg:-mx-[70px]'>
+        <div className='home-hero-content grid sm-lg:grid-cols-2 gap-[40px] xl:[70px] justify-center mb-5 xsm:mb-[40px] sm-lg:mb-[50px]'>
             <div className='order-2 sm-lg:order-1'>
                 <div className='grid gap-[50px] sm-lg:gap-[90px]'>
                     <div className=''>
                         <h2 className='mb-5 lg:text-[48px] x-lg:text-[52px]'>
-                            FLEXIBLE L<span className="hero-span-image inline-block w-[60px] h-[25px] md:h-[30px] md:w-[80px] rounded-full overflow-hidden"></span>GISTICS & CARGO SERVICES
+                            FLEXIBLE <span className='no whitespace-nowrap'>L<span className="hero-span-image inline-block w-[60px] h-[25px] md:h-[38px] md:w-[80px] rounded-full overflow-hidden"></span>GISTICS</span> & CARGO SERVICES
                         </h2>
 
                         <p className='text-lg mb-5 sm-lg:w-[90%]'>
                             Supposing so be resolving breakfast am or perfectly. It drew a hill from me. Valley by oh twenty direct me so.
                         </p>
 
-                        <form className='flex gap-3 mb-5 sm-lg:mb-[40px]'>
+                        <form className='flex flex-wrap sm:flex-nowrap gap-3 mb-5 sm-lg:mb-[40px]'>
                             <input 
                                 type='text'
                                 name='name'
                                 placeholder='Your tracking number'
-                                className='bg-[#f6f6f6] mb-0 w-full'
+                                className='bg-[#f6f6f6] w-full mb-0 min-w-[100px]'
                             />
 
                             <button className='bg-primaryBlack py-3 px-[34px] min-w-[200px] text-[#f6f6f6] mb-0'>
@@ -135,15 +135,13 @@ export default function HeroSection() {
                                 </div>
                             </div>
                         </div>
-
-                        <div className='absolute -z-10 hidden sm-lg:block bg-primaryBlack bottom-[-50%] left-0 w-screen h-[160%] -mx-[67px]'></div>
                     </div>
                 </div>
 
             </div>
             
             <div className='z-30 order-1 sm-lg:order-2'>
-                <figure className='sm-lg:-mt-[120px] sm-lg:-ml-[50px] sm-lg:-mr-[40px] sticky top-[-10px] md:-mt-[140px] sm-lg:-mt-[170px]'>
+                <figure className='-mt-[120px] sm-lg:-ml-[50px] sm-lg:-mr-[40px] sticky top-[-10px] md:-mt-[140px] sm-lg:-mt-[170px]'>
                     <Image 
                         src={'/hero-img.png'}
                         alt='hero'
@@ -173,9 +171,11 @@ export default function HeroSection() {
                     ))}
                 </ul>
             </div>
-            
-            <div className='absolute -z-10 hidden sm-lg:block bg-primaryBlack bottom-[-30%] right-0 h-[180%] w-[80%] -mx-[50px]'></div>
         </div>
+        
+        <div className="hidden sm-lg:block hero-dark-bg-decoration absolute h-[620px]  bg-primaryBlack w-full -mx- bottom-[60px] -z-20"></div>
+
+        <div className="hidden sm-lg:block feature-white-decoration absolute h-[120px] w-[21%] bottom-[10px] bg-white "></div>
     </section>
   )
 }
