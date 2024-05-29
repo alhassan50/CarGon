@@ -20,11 +20,11 @@ const HOW_IT_WORKS = [
 
 export default function HowItWorks() {
   return (
-    <section className='relative bg-primaryBlack pb-[0px] md:pb-[300px] pt-[50px] mt:pt-[80px] -mx-[15px] md:-mx-[20px] sm-lg:-mx-[30px] lg:-mx-[50px] x-lg:-mx-[70px]'>
+    <section className='relative bg-primaryBlack pb-[60px] sm-lg:pb-[300px] pt-[50px] mt:pt-[80px] -mx-[15px] md:-mx-[20px] sm-lg:-mx-[30px] lg:-mx-[50px] x-lg:-mx-[70px]'>
         <div className='grid gap-10 sm-lg:grid-cols-2 px-[15px] md:px-[20px] sm-lg:px-[30px] lg:px-[50px] x-lg:px-[70px]'>
             <div className='relative sm-lg:absolute sm-lg:bottom-[50px]'>
                 <div className='w-[50%]'>
-                    <h2 className='mb-[40px] sm-lg:text-white'>
+                    <h2 className='mb-[40px] text-white'>
                         How It Works
                     </h2>
 
@@ -163,7 +163,7 @@ export default function HowItWorks() {
         
         {/* <div className="absolute h-[620px]  bg-primaryBlack w-full -mx- bottom-[60px] -z-20"></div> */}
 
-        <div className="absolute h-[120px] w-[43%] bottom-[0px] right-0 bg-white "></div>
+        <div className="absolute h-[20px] xsm:h-[40px] sm:h-[60px] md:h-[80px] lg:h-[180px] w-[43%] bottom-[0px] right-0 bg-white "></div>
     </section>
   )
 }
