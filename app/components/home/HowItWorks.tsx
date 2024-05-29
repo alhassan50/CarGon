@@ -1,4 +1,5 @@
 import React from 'react'
+import Image from 'next/image';
 
 const HOW_IT_WORKS = [
     {
@@ -20,7 +21,28 @@ const HOW_IT_WORKS = [
 
 export default function HowItWorks() {
   return (
-    <section className='relative bg-primaryBlack pb-[60px] sm-lg:pb-[300px] pt-[50px] mt:pt-[80px] -mx-[15px] md:-mx-[20px] sm-lg:-mx-[30px] lg:-mx-[50px] x-lg:-mx-[70px]'>
+    <section className='relative bg-primaryBlack pb-[60px] sm-lg:pb-[300px] pt-[50px] sm-lg:pt-[80px] -mx-[15px] md:-mx-[20px] sm-lg:-mx-[30px] lg:-mx-[50px] x-lg:-mx-[70px]'>
+
+        <figure className='hidden sm-lg:block'>
+            <Image 
+                src={'/cargo.png'}
+                alt=''
+                width={1130}
+                height={780}
+                className='w-[695px] h-[480px] md-lg:w-[895px] md-lg:h-[680px] absolute -top-[28%] md-lg:-top-[23%] -left-[20%]'
+            />
+        </figure>
+        
+        <figure className='relative hidden sm-lg:block'>            
+            <Image 
+                src={'/box.png'}
+                alt=''
+                width={350}
+                height={150}
+                className='w-[187px] h-[80px] absolute -bottom-[130px] right-[49%] md-lg:-bottom-[250px] md-lg:right-[55%]'
+            />
+        </figure>
+
         <div className='grid gap-10 sm-lg:grid-cols-2 px-[15px] md:px-[20px] sm-lg:px-[30px] lg:px-[50px] x-lg:px-[70px]'>
             <div className='relative sm-lg:absolute sm-lg:bottom-[50px]'>
                 <div className='w-[50%]'>
