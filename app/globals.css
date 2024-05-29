@@ -65,12 +65,18 @@
     @apply mb-[5px] text-[#545454] md:text-lg
   }
   
-  input, textarea {
+  
+  
+  input, textarea, select {
     @apply px-[20px] py-[12px] text-[#545454] mb-[10px] md:text-lg outline-1 outline-primaryBlue
   }
   
   textarea {
     @apply px-[20px] py-[12px] text-[#545454] md:text-lg
+  }
+
+  .quote-form input, .quote-form select {
+    @apply bg-transparent placeholder:text-white border-b-2 border-b-[#545454] outline-none focus:border-b-white transition-all duration-300
   }
 
   .active-link {

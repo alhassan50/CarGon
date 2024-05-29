@@ -37,7 +37,7 @@ const TRANSPORTATION_COMPANY_DATA = [
 
 export default function HeroSection() {
   return (
-    <section className='relative mx-auto pb-[0px] md:pb-[90px] pt-[50px] -mx-[15px] md:-mx-[20px] sm-lg:-mx-[30px] lg:-mx-[50px] x-lg:-mx-[70px]'>
+    <section className='relative pb-[0px] md:pb-[90px] pt-[50px] -mx-[15px] md:-mx-[20px] sm-lg:-mx-[30px] lg:-mx-[50px] x-lg:-mx-[70px]'>
         <div className='home-hero-content grid sm-lg:grid-cols-2 gap-[40px] xl:[70px] justify-center mb-5 xsm:mb-[40px] sm-lg:mb-[50px]'>
             <div className='order-2 sm-lg:order-1'>
                 <div className='grid gap-[50px] sm-lg:gap-[90px]'>
