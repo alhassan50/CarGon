@@ -37,7 +37,7 @@
     @apply text-[#545454] font-normal
   }
   
-  main, .home-hero-content {
+  main, .home-hero-content, .services-section-content {
     @apply px-[15px] md:px-[20px] sm-lg:px-[30px] lg:px-[50px] x-lg:px-[70px]
   }
 
