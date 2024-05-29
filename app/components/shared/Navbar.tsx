@@ -68,7 +68,7 @@ export default function Navbar() {
   return (
     <div className='relative'>
         <div className='py-[10px] md:pt-[30px] sm-lg:pt-[40px] sm-lg:pb-[20px] bg-white'>
-            <div className='flex justify-between items-center px-[15px] md:px-[30px] xl:px-[5%]'>
+            <div className='z-50 flex justify-between items-center px-[15px] md:px-[30px] xl:px-[5%]'>
                 <Logo theme='dark' />
 
                 <nav className='hidden sm-lg:block'>
@@ -78,12 +78,12 @@ export default function Navbar() {
                 </nav>
 
                 <div className='flex gap-3'>
-                    <button className='bg-[#282dad] py-3 px-[34px] text-[#f6f6f6] hidden xsm:block'>
+                    <button className='z-50 bg-[#282dad] py-3 px-[34px] text-[#f6f6f6] hidden xsm:block'>
                         Get a quote
                     </button>
 
                     <figure 
-                        className={`w-[48px] h-[48px] flex justify-center items-center bg-[#18192e] cursor-pointer ${isNavLinksVisible && 'bg-[#282dad]'} sm-lg:hidden`}
+                        className={`z-50 w-[48px] h-[48px] flex justify-center items-center bg-[#18192e] cursor-pointer ${isNavLinksVisible && 'bg-[#282dad]'} sm-lg:hidden`}
                         onClick={toggleNavLinksVisibility}
                     >
                         <CgMenu className='text-white text-[24px]'/>
@@ -101,7 +101,7 @@ export default function Navbar() {
                 >
                 </div>
                 
-                <nav className='absolute w-full sm-lg:hidden'>
+                <nav className='z-50 absolute w-full sm-lg:hidden'>
                     <ul className='w-[93%] mx-[auto] top-16 left-0 p-[20px] pt-[10px] bg-[#f6f6f6] border border-[#b9b9b9]'>
                         {renderMenuItems}
                     </ul>
