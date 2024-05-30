@@ -18,7 +18,7 @@ export default function Pricing() {
                             <li className={`p-5 flex justify-between ${plan.plan === 'Advance' ? 'bg-primaryBlue lg:mb-[50px]' : 'bg-[#f6f6f6] lg:mt-[50px]'}`} key={plan.plan}>
                                 <div className='grid gap-[20px] w-full'>
                                     <div>
-                                        <h3 className={`text-[30px] mb-[20px] font-semibold ${plan.plan === 'Advance' ? 'text-white' : 'text-primaryBlack'}`}>
+                                        <h3 className={`text-[30px] mb-[20px] font-semibold ${plan.plan === 'Advance' ? 'text-primaryBlue' : 'text-primaryBlack'}`}>
                                             {plan.plan}
                                         </h3>
 
@@ -58,7 +58,7 @@ export default function Pricing() {
                                         </ul>
                                     </div>
 
-                                    <button className={`sm-lg:mt-[30px] w-full py-3 px-[34px] text-[#f6f6f6] ${plan.plan === 'Advance' ? 'bg-white text-primaryBlack' : 'bg-primaryBlack'}`}>
+                                    <button className={`mt-[20px] sm-lg:mt-[30px] w-full py-3 px-[34px] text-[#f6f6f6] ${plan.plan === 'Advance' ? 'bg-white text-primaryBlack' : 'bg-primaryBlack'}`}>
                                         Get Started
                                     </button>
                                 </div>
