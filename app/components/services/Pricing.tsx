@@ -58,7 +58,7 @@ export default function Pricing() {
                                         </ul>
                                     </div>
 
-                                    <button className={`mt-[20px] sm-lg:mt-[30px] w-full py-3 px-[34px] text-[#f6f6f6] ${plan.plan === 'Advance' ? 'bg-white text-primaryBlack' : 'bg-primaryBlack'}`}>
+                                    <button className={`mt-[20px] sm-lg:mt-[30px] w-full py-3 px-[34px] text-[#f6f6f6] ${plan.plan === 'Advance' ? 'bg-white text-primaryBlack hover:bg-primaryBlack hover:text-white border border-primaryBlack' : 'bg-primaryBlack hover:bg-white hover:text-primaryBlack border border-primaryBlack'}`}>
                                         Get Started
                                     </button>
                                 </div>
