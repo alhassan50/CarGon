@@ -5,7 +5,7 @@ import { SERVICES } from '@/app/data/services'
 
 export default function Freights() {
   return (
-    <section className='relative py-[40px] md:py-[50px] sm-lg:py-[70px] xl:py-[100px]'>
+    <section className='relative pb-[40px] md:pb-[50px] sm-lg:pb-[70px] xl:pb-[100px]'>
         <div className='grid gap-[30px] lg:gap-10 md:grid-cols-2 xl:grid-cols-3'>
             <div>
                 <h2 className='mb-[10px]'>Transportation services hub</h2>

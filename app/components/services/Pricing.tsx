@@ -15,7 +15,7 @@ export default function Pricing() {
                 <ul className='grid md:grid-cols-2 lg:grid-cols-3 gap-[30px]'>
                     {
                         PRICING_PLANS.map(plan => (
-                            <li className={`p-5 flex justify-between ${plan.plan === 'Advance' ? 'bg-primaryBlue lg:mb-[50px]' : 'bg-[#f6f6f6] lg:mt-[50px]'}`} key={plan.plan}>
+                            <li className={`p-5 lg:p-[30px] flex justify-between ${plan.plan === 'Advance' ? 'bg-primaryBlue lg:mb-[50px]' : 'bg-[#f6f6f6] lg:mt-[50px]'}`} key={plan.plan}>
                                 <div className='grid gap-[20px] w-full'>
                                     <div>
                                         <h3 className={`text-[30px] mb-[20px] font-semibold ${plan.plan === 'Advance' ? 'text-white' : 'text-primaryBlue'}`}>
