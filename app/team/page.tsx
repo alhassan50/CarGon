@@ -11,7 +11,7 @@ const renderTeam = TEAM_MEMBERS.map(member => (
     </li>
 ))
 
-export default function page() {
+export default function Team() {
   return (
     <main>
         <div className='mb-10 md:mb-[50px] sm-lg:mb-[70px] xl:mb-[100px]'>
