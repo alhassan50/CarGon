@@ -175,7 +175,7 @@ export default function HowItWorks() {
                     </div>
 
 
-                    <button className='bg-primaryBlue max-w-[200px] border mt-[30px] border-primaryBlack text-white px-[34px] py-3 w-full md:text-lg'>
+                    <button className='bg-primaryBlue hover:translate-y-3 max-w-[200px] border mt-[30px] border-primaryBlack text-white px-[34px] py-3 w-full md:text-lg'>
                         Submit
                     </button>
                 </form>

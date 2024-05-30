@@ -1,15 +1,18 @@
 import React from 'react'
+import Link from 'next/link'
+
 import BlogCard from './BlogCard'
 
 import {BLOGS} from '@/app/data/blog'
 
 const renderBlogs = [...BLOGS].slice(0,3).map(blog => (
-    <li
-        key={blog.title} 
-        className=''
-    >
-        <BlogCard blog={blog} />
-    </li>
+    <Link href='#' key={blog.title}>
+        <li 
+            className='group cursor-pointer'
+        >
+            <BlogCard blog={blog} />
+        </li>
+    </Link>
 ))
 
 export default function Blog() {

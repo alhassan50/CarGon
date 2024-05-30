@@ -58,7 +58,7 @@ export default function HeroSection() {
                                 className='bg-[#f6f6f6] w-full mb-0 min-w-[100px]'
                             />
 
-                            <button className='bg-primaryBlack py-3 px-[34px] min-w-[200px] text-[#f6f6f6] mb-0'>
+                            <button className='bg-primaryBlack hover:bg-white hover:text-primaryBlack border border-primaryBlack py-3 px-[34px] min-w-[200px] text-[#f6f6f6] mb-0'>
                                 Track your order
                             </button>
                         </form>
@@ -117,7 +117,7 @@ export default function HeroSection() {
                         </ul>
                         
                         <div className='flex gap-5 flex-wrap'>
-                            <button className='bg-primaryBlue border border-primaryBlack text-white px-[34px] py-3 md:text-lg'>
+                            <button className='bg-primaryBlue hover:translate-y-3 border border-primaryBlack text-white px-[34px] py-3 md:text-lg'>
                                 Read more about
                             </button>
                             <div className='flex gap-2 items-center'>

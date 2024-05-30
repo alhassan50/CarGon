@@ -82,4 +82,8 @@
   .active-link {
     @apply text-primaryBlue
   }
+
+  button {
+    @apply transition-all duration-500
+  }
 }
