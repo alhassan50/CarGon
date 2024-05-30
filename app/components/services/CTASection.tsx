@@ -10,7 +10,7 @@ export default function CTASection() {
                 </h2>
 
                 <div className='flex items-center justify-end'>
-                    <div className='relative group w-[150px] h-[150px] flex justify-center items-center border rounded-[50%]'>
+                    <div className='relative group w-[150px] h-[150px] flex justify-center items-center border border-primaryBlue rounded-[50%]'>
 
                         <h4 className='text-white group-hover:text-primaryBlack transition-all duration-500 z-10'>
                             Let&apos;s Talk
