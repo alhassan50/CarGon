@@ -11,8 +11,8 @@ import { SOCIAL_ICONS } from '@/app/data/socialIcons'
 
 const renderFooterLinks = (pages: PageList) => {
     return pages.map(page => (
-        <li key={page.to} className='text-lg hover:underline hover:text-white transition-all '>
-            <Link href={page.to}>
+        <li key={page.to} className='text-lg flex justify-start items-start'>
+            <Link href={page.to} className='hover:underline hover:text-white transition-all duration-300'>
                 {page.title}
             </Link>
         </li>

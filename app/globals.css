@@ -63,9 +63,7 @@
   
   .input-section label {
     @apply mb-[5px] text-[#545454] md:text-lg
-  }
-  
-  
+  }  
   
   input, textarea, select {
     @apply px-[20px] py-[12px] text-[#545454] mb-[10px] md:text-lg outline-1 outline-primaryBlue
