@@ -19,4 +19,14 @@ export const TEAM_MEMBERS: MembersList = [
         role: 'Transportation Manager',
         image: '/judy.jpg'
     },
+    {
+        name: 'Dennis Barett',
+        role: 'Dispatcher',
+        image: '/dennis.jpg'
+    },
+    {
+        name: 'Billy Vasquez',
+        role: 'Cargo Operations Manager',
+        image: '/billy.jpg'
+    },
 ]

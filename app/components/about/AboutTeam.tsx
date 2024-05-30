@@ -4,7 +4,7 @@ import TeamCard from './TeamCard';
 //data
 import {TEAM_MEMBERS} from '@/app/data/team' 
 
-const renderTeam = TEAM_MEMBERS.map(member => (
+const renderTeam = [...TEAM_MEMBERS].slice(0,4).map(member => (
     <li key={member.name} className='group'>
         <TeamCard member={member} />
     </li>
