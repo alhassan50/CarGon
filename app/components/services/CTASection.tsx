@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function CTASection() {
   return (
-    <section className='px-[15px] xsm:px-[15px] sm-lg:px-[30px] md:pb-[40px] sm-lg:pb-[50px] lg:pb-[70px] xl:pb-[100px] x-lg:pb-[150px]'>
+    <section className='px-[15px] xsm:px-[15px] sm-lg:px-[30px] pb-[40px] sm-lg:pb-[50px] lg:pb-[70px] xl:pb-[100px] x-lg:pb-[150px]'>
         <div className=' sm-lg:max-w-[1460px] mx-auto'>
             <div className='grid gap-[40px] md:grid-cols-[1.5fr,1fr] sm-lg:max-w-[90%] mx-auto bg-primaryBlack p-[20px] md:p-10 xl:p-[50px] x-lg:p-[70px]'>
                 <h2 className='text-white text-[36px] xsm:text-[40px] md:text-[48px] xl:text-[52px] x-lg:text-[55px] '>
