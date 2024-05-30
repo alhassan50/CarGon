@@ -73,6 +73,7 @@ type Service = {
     title: string;
     desc: string;
     image: string;
+    weight: string;
 }
 
 type ServiceList = Service[]
