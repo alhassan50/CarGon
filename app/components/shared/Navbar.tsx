@@ -24,7 +24,7 @@ export default function Navbar() {
     const renderMenuItems = MENU_ITEMS.map(item => (
         <li 
             key={item.to}
-            className={`${item.to &&'my-[10px]'} group text-lg hover:text-[#282dad] transition-all duration-300`}
+            className={`${item.to &&'my-[10px]'} flex justify-start items-start group text-lg hover:text-[#282dad] transition-all duration-300`}
         >
             {
                 item.to ?
@@ -40,11 +40,11 @@ export default function Navbar() {
                         {item.title}
                         <MdOutlineKeyboardArrowDown className='text-[24px]' />
                     </div>
-                    <div className='sm-lg:absolute top-full left-0 min-w-full bg-[#282dad] py-2 px-5 group-hover:block translate-y-8 opacity-0 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300 border border-[#18192e] z-50'>
+                    <div className='sm-lg:absolute top-full left-0 min-w-full bg-[#282dad] py-2 px-5 group-hover:block translate-y-8 opacity-0 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300 hidden sm-lg:block border border-[#18192e] z-50'>
                         <ul> 
                             {item.dropdownItems?.map(dropdownItem => (
                                 <li 
-                                    className='text-white h-full'
+                                    className='text-white h-full flex justify-start items-start'
                                     key={dropdownItem.to} 
                                 >
                                     {
