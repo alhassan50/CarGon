@@ -42,7 +42,7 @@ function BlogContent() {
     return (
         <main>
             <div className='mb-10 md:mb-[50px] sm-lg:mb-[70px] xl:mb-[100px]'>
-                <h1 className='text-center my-[30] xsm:my-20 md:my-[50px] sm-lg:my-[90px]'>
+                <h1 className='text-center my-[30px] xsm:my-20 md:my-[50px] sm-lg:my-[90px]'>
                     Blog
                 </h1>
 
