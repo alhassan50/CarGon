@@ -9,17 +9,17 @@ import { useRouter, useSearchParams } from 'next/navigation'
 
 
 export default function Blog() {
-    const searchParams = useSearchParams();
+    //const searchParams = useSearchParams();
     const paramValue = searchParams.get('page')
     const router = useRouter()
 
     console.log(paramValue)
 
-
-
     let [pageNumber, setPageNumber] = useState((paramValue && paramValue !== '') ? parseInt(paramValue) : 1)
 
     console.log("(paramValue && paramValue !== '') ? parseInt(paramValue) : 1: ", (paramValue && paramValue !== '') ? parseInt(paramValue) : 1)
+
+    
 
     console.log("pageNumber: ", pageNumber) 
 
