@@ -35,7 +35,7 @@ export default function Navbar() {
                     {item.title}
                 </Link>
                 :
-                <div className='z-50 relative pb-[3px] max-w-full flex flex-col justify-between items-start gap-1 group cursor-pointer'>
+                <div className='z-50 relative pb-[3px] min-w-full flex flex-col justify-between items-start gap-1 group cursor-pointer'>
                     <div className='flex gap-1 justify-between w-full'>
                         {item.title}
                         <MdOutlineKeyboardArrowDown className='text-[24px]' />
