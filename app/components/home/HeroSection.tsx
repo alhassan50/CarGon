@@ -154,7 +154,7 @@ export default function HeroSection() {
         </div>
         
         <div className='mb-[30px] relative px-[15px] md:px-[20px] sm-lg:px-[30px] lg:px-[50px] x-lg:px-[70px]'>
-            <div className='sm-lg:max-w-[70%] sm-lg:ml-auto'>
+            <div className='sm-lg:max-w-[50%] sm-lg:ml-auto'>
                 <h4 className='mb-[10px] sm-lg:text-white'>
                     Transportation Company
                 </h4>
@@ -175,7 +175,7 @@ export default function HeroSection() {
         
         <div className="hidden sm-lg:block hero-dark-bg-decoration absolute h-[620px]  bg-primaryBlack w-full -mx- bottom-[60px] -z-20"></div>
 
-        <div className="hidden sm-lg:block feature-white-decoration absolute h-[120px] w-[21%] bottom-[10px] bg-white "></div>
+        <div className="hidden sm-lg:block feature-white-decoration absolute h-[120px] w-[45%] bottom-[10px] bg-white "></div>
     </section>
   )
 }

@@ -58,7 +58,7 @@ export default function Mission() {
                     </div>
                 </div>
 
-                <button className='bg-[#282dad] py-3 px-[34px] text-[#f6f6f6]'>
+                <button className='bg-[#282dad] hover:translate-y-3 py-3 px-[34px] text-[#f6f6f6]'>
                     Know more about us
                 </button>
             </div>

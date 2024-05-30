@@ -17,7 +17,7 @@ const renderServices = SERVICES.map((service, index) => (
 export default function ServicesSection() {
   return (
     <div className='-mx-[15px] md:-mx-[20px] sm-lg:-mx-[30px] lg:-mx-[50px] x-lg:-mx-[70px]'>
-            <figure className='hidden sm-lg:block relative ml-auto -mt-[130px] mb-20 w-[85%]'>
+            <figure className='hidden sm-lg:block relative ml-auto -mt-[130px] mb-20 w-[75%]'>
                 <Image 
                     src={'/path2.svg'}
                     alt=''
