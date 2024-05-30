@@ -31,7 +31,7 @@ function BlogContent() {
             [...BLOGS].slice((6 * pageNumber) - 6, (6 * pageNumber) > BLOGS.length ? BLOGS.length : (6 * pageNumber)).map(blog => (
                 <li
                     key={blog.title}
-                    className=''
+                    className='group cursor-pointer'
                 >
                     <BlogCard blog={blog} />
                 </li>

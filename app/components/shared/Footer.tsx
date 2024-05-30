@@ -119,7 +119,7 @@ export default function Footer() {
                             Ready to ship with us?
                         </h1>
 
-                        <button className='bg-[#282dad] py-3 px-[34px] text-[#f6f6f6]'>
+                        <button className='bg-[#282dad] hover:translate-y-3 py-3 px-[34px] text-[#f6f6f6]'>
                             Ship your package
                         </button>
                     </div>

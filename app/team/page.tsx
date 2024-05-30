@@ -6,7 +6,7 @@ import TeamCard from '../components/about/TeamCard'
 import {TEAM_MEMBERS} from '@/app/data/team' 
 
 const renderTeam = TEAM_MEMBERS.map(member => (
-    <li key={member.name} className='group'>
+    <li key={member.name} className='group overflow-hidden'>
         <TeamCard member={member} />
     </li>
 ))

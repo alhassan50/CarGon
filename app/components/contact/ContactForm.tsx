@@ -46,7 +46,7 @@ export default function ContactForm() {
                 />
             </div>
 
-            <button className='bg-primaryBlue border border-primaryBlack text-white px-[34px] py-3 w-full md:text-lg'>
+            <button className='bg-primaryBlue hover:translate-y-3 border border-primaryBlack text-white px-[34px] py-3 w-full md:text-lg'>
                 Submit
             </button>
         </form>

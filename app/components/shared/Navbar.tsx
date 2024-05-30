@@ -35,12 +35,12 @@ export default function Navbar() {
                     {item.title}
                 </Link>
                 :
-                <div className=' relative pb-[3px] max-w-full flex flex-col justify-between items-start gap-1 group'>
+                <div className=' relative pb-[3px] max-w-full flex flex-col justify-between items-start gap-1 group cursor-pointer'>
                     <div className='flex gap-1 justify-between w-full'>
                         {item.title}
                         <MdOutlineKeyboardArrowDown className='text-[24px]' />
                     </div>
-                    <div className='sm-lg:absolute top-full left-0 min-w-full bg-[#282dad] py-2 px-5 hidden group-hover:block border border-[#18192e]'>
+                    <div className='sm-lg:absolute top-full left-0 min-w-full bg-[#282dad] py-2 px-5 group-hover:block translate-y-8 opacity-0 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300 border border-[#18192e] z-50'>
                         <ul> 
                             {item.dropdownItems?.map(dropdownItem => (
                                 <li 
@@ -51,7 +51,7 @@ export default function Navbar() {
                                         dropdownItem.to &&
                                         <Link 
                                             href={dropdownItem.to} 
-                                            className='whitespace-nowrap py-1'
+                                            className='whitespace-nowrap py-1 hover:underline'
                                         >
                                             {dropdownItem.title}
                                         </Link>
