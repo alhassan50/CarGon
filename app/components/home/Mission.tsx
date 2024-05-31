@@ -90,15 +90,18 @@ export default function Mission() {
                 </div>
 
                 <Link href={'/about'}>
-                    <motion.button 
-                        className='bg-[#282dad] hover:translate-y-3 py-3 px-[34px] text-[#f6f6f6]'
+                    <motion.div
                         variants={fadeIn("up", 0.5, 0)}
                         initial="offscreen"
                         whileInView="onscreen"
                         viewport={{ once: true, amount: 0 }}
                     >
-                        Know more about us
-                    </motion.button>
+                        <button 
+                            className='bg-[#282dad] hover:translate-y-3 py-3 px-[34px] text-[#f6f6f6]'
+                        >
+                            Know more about us
+                        </button>
+                    </motion.div>
                 </Link>
             </div>
         </div>
