@@ -25,7 +25,7 @@ export const fadeIn = (direction: string, duration: number, delay: number) => {
 }};
 
 export const container = {
-    offscreen: { opacity: 1, scale: 0 },
+    offscreen: { opacity: 1, scale: .7 },
     onscreen: {
       opacity: 1,
       scale: 1,
