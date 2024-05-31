@@ -1,8 +1,16 @@
+'use client'
+
 import React from 'react'
 import Image from 'next/image'
-
-import {BRANDS} from '@/app/data/brands'
+import { motion } from 'framer-motion';
 import Link from 'next/link';
+
+//data
+import {BRANDS} from '@/app/data/brands'
+
+//framer variants
+import { fadeIn, container, item } from '@/framerVariants';
+import HeroBanner from './HeroBanner';
 
 const FEATURES = [
     "Safe Packing",
@@ -43,29 +51,16 @@ export default function HeroSection() {
             <div className='order-2 sm-lg:order-1'>
                 <div className='grid gap-[50px] sm-lg:gap-[90px]'>
                     <div className=''>
-                        <h2 className='mb-5 lg:text-[48px] x-lg:text-[52px]'>
-                            FLEXIBLE <span className='no whitespace-nowrap'>L<span className="hero-span-image inline-block w-[60px] h-[25px] md:h-[38px] md:w-[80px] rounded-full overflow-hidden"></span>GISTICS</span> & CARGO SERVICES
-                        </h2>
-
-                        <p className='text-lg mb-5 sm-lg:w-[90%]'>
-                            Supposing so be resolving breakfast am or perfectly. It drew a hill from me. Valley by oh twenty direct me so.
-                        </p>
-
-                        <form className='flex flex-wrap sm:flex-nowrap gap-3 mb-5 sm-lg:mb-[40px]'>
-                            <input 
-                                type='text'
-                                name='name'
-                                placeholder='Your tracking number'
-                                className='bg-[#f6f6f6] w-full mb-0 min-w-[100px]'
-                            />
-
-                            <button className='bg-primaryBlack hover:bg-white hover:text-primaryBlack border border-primaryBlack py-3 px-[34px] min-w-[200px] text-[#f6f6f6] mb-0'>
-                                Track your order
-                            </button>
-                        </form>
+                        <HeroBanner />
 
                         <div className='relative'>
-                            <figure className='hidden -z-20 sm-lg:block absolute top-0 -ml-[30px] sm-lg:-ml-[50px]'>
+                            <motion.figure 
+                                className='hidden -z-20 sm-lg:block absolute top-0 -ml-[30px] sm-lg:-ml-[50px]'
+                                variants={fadeIn("right", 0.5, 0)}
+                                initial="offscreen"
+                                whileInView="onscreen"
+                                viewport={{ once: true, amount: 0 }}
+                            >
                                 <Image 
                                     src={'/path.svg'}
                                     alt=''
@@ -73,8 +68,14 @@ export default function HeroSection() {
                                     height={416}
                                     className='w-full h-auto'
                                 />
-                            </figure>
-                            <div className='sm-lg:pt-[120px]'>
+                            </motion.figure>
+                            <motion.div 
+                                className='sm-lg:pt-[120px]'
+                                variants={fadeIn("up", 0.5, 0)}
+                                initial="offscreen"
+                                whileInView="onscreen"
+                                viewport={{ once: true, amount: 0 }}
+                            >
                                 <h4 className='text-lg mb-5'>Trusted By</h4>
                                 <ul className='flex flex-wrap gap-[30px]'>
                                     {[...BRANDS].slice(0, 4).map(brand => (
@@ -91,15 +92,27 @@ export default function HeroSection() {
                                         </li>
                                     ))}
                                 </ul>
-                            </div>
+                            </motion.div>
                         </div>
                     </div>
                     <div className='relative sm-lg:text-white'>
-                        <h2 className='mb-5 lg:text-[48px] x-lg:text-[52px] sm-lg:text-white'>
+                        <motion.h2 
+                            className='mb-5 lg:text-[48px] x-lg:text-[52px] sm-lg:text-white'
+                            variants={fadeIn("up", 0.5, 0)}
+                            initial="offscreen"
+                            whileInView="onscreen"
+                            viewport={{ once: true, amount: 0 }}
+                        >
                             Powering logistics across business
-                        </h2>
+                        </motion.h2>
                         
-                        <ul className='grid items-start justify-start xsm:grid-cols-2 gap-3 mb-[30px] mt-[24px]'>
+                        <motion.ul 
+                            className='grid items-start justify-start xsm:grid-cols-2 gap-3 mb-[30px] mt-[24px]'
+                            variants={fadeIn("up", 0.5, 0)}
+                            initial="offscreen"
+                            whileInView="onscreen"
+                            viewport={{ once: true, amount: 0 }}
+                        >
                             {FEATURES.map(feature => (
                                 <li key={feature} className='flex gap-3 items-center'>
                                     <figure>
@@ -115,9 +128,15 @@ export default function HeroSection() {
                                     {feature}
                                 </li>
                             ))}
-                        </ul>
+                        </motion.ul>
                         
-                        <div className='flex gap-5 flex-wrap'>
+                        <motion.div 
+                            className='flex gap-5 flex-wrap'
+                            variants={fadeIn("up", 0.5, 0)}
+                            initial="offscreen"
+                            whileInView="onscreen"
+                            viewport={{ once: true, amount: 0 }}
+                        >
                             <Link href='/about'>
                                 <button className='bg-primaryBlue hover:translate-y-3 border border-primaryBlack text-white px-[34px] py-3 md:text-lg'>
                                     Read more about
@@ -137,7 +156,7 @@ export default function HeroSection() {
                                     <p className='text-lg sm-lg:text-white text-primaryBlack'>+91 123 456 789</p>
                                 </div>
                             </div>
-                        </div>
+                        </motion.div>
                     </div>
                 </div>
 
@@ -158,21 +177,36 @@ export default function HeroSection() {
         
         <div className='mb-[30px] relative px-[15px] md:px-[20px] sm-lg:px-[30px] lg:px-[50px] x-lg:px-[70px]'>
             <div className='sm-lg:max-w-[50%] sm-lg:ml-auto'>
-                <h4 className='mb-[10px] sm-lg:text-white'>
+                <motion.h4 
+                    className='mb-[10px] sm-lg:text-white'
+                    variants={fadeIn("right", 0.5, 0)}
+                    initial="offscreen"
+                    whileInView="onscreen"
+                    viewport={{ once: true, amount: 0 }}
+                >
                     Transportation Company
-                </h4>
-                <ul className='grid xsm:grid-cols-2 sm-lg:grid-cols-4 gap-3 mt-[30px]'>
+                </motion.h4>
+                <motion.ul 
+                    className='grid xsm:grid-cols-2 sm-lg:grid-cols-4 gap-3 mt-[30px]'
+                    variants={container}
+                    initial="offscreen"
+                    whileInView="onscreen"
+                    viewport={{ once: true, amount: 0 }}
+                >
                     {TRANSPORTATION_COMPANY_DATA.map(data => (
-                        <li key={data.title} className='grid items-center'>
+                        <motion.li 
+                            key={data.title} className='grid items-center'
+                            variants={item}
+                        >
                             <h2 className='mb-[10px] sm-lg:text-white'>
                                 {data.value}<span className='text-primaryBlue'>{data.append}</span>
                             </h2>
                             <p className='sm-lg:text-white'>
                                 {data.title}
                             </p>
-                        </li>
+                        </motion.li>
                     ))}
-                </ul>
+                </motion.ul>
             </div>
         </div>
         

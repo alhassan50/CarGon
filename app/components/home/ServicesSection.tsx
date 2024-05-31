@@ -1,10 +1,16 @@
+'use client'
+
 import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
+import { motion } from 'framer-motion'
 
 //data
 import {SERVICES} from '@/app/data/services'
 import Service from './Service'
+
+//framer variant
+import { ScaleUp, Scale } from '@/framerVariants'
 
 const renderServices = SERVICES.map((service, index) => (
     <Link href={'/service-details'} key={service.title}>
@@ -30,13 +36,25 @@ export default function ServicesSection() {
             </figure>
         <section className='services-section-content pb-[50px] md:pb-[70px] lg:pb-[100px]'>
             <div className='mb-[30px]'>
-                <h2 className='mb-[10px] text-[36px] xsm:text-[40x] md:text-[48px] xl:text-[52px]'>
+                <motion.h2 
+                    className='mb-[10px] text-[36px] xsm:text-[40x] md:text-[48px] xl:text-[52px]'
+                    variants={Scale(0.5, 0)}
+                    initial="offscreen"
+                    whileInView="onscreen"
+                    viewport={{ once: true, amount: 0 }}
+                >
                     Shipping and Logistic services
-                </h2>
+                </motion.h2>
             </div>
-            <ul className='grid gap-[30px] sm-lg:gap-[60px]'>
+            <motion.ul 
+                className='grid gap-[30px] sm-lg:gap-[60px]'
+                variants={ScaleUp(0.5, 0)}
+                initial="offscreen"
+                whileInView="onscreen"
+                viewport={{ once: true, amount: 0 }}
+            >
                 {renderServices}
-            </ul>
+            </motion.ul>
 
         </section>
     </div>

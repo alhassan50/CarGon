@@ -1,13 +1,18 @@
+'use client'
+
 import React from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import Logo from './Logo'
+import { motion } from 'framer-motion'
 
 //data
 import { MAIN_PAGES } from '@/app/data/mainPages'
 import { UTIL_PAGES } from '@/app/data/utilsPages'
 import { SOCIAL_ICONS } from '@/app/data/socialIcons'
-  
+
+//framer variant
+import { fadeIn, container, item, ScaleUp } from '@/framerVariants'
 
 const renderFooterLinks = (pages: PageList) => {
     return pages.map(page => (
@@ -39,23 +44,43 @@ export default function Footer() {
         <div className='mx-[15px] md:mx-[30px] lg:mx-[50px] x-lg:mx-[70px]'>
             <div className='grid gap-[50px] md-lg:grid-cols-[1.75fr,1fr]'>
                 <div>
-                    <Logo theme='light' />
-                    <div className='grid gap-[20px] md:grid-cols-3 mt-[30px] md:mt-[70px] mb-[90px]'>
-                        <div>
+                    <motion.div
+                        variants={fadeIn("up", 0.5, 0)}
+                        initial="offscreen"
+                        whileInView="onscreen"
+                        viewport={{ once: true, amount: 0 }}
+                    >
+                        <Logo theme='light' />
+                    </motion.div>
+
+                    <motion.div 
+                        className='grid gap-[20px] md:grid-cols-3 mt-[30px] md:mt-[70px] mb-[90px]'
+                        variants={container}
+                        initial="offscreen"
+                        whileInView="onscreen"
+                        viewport={{ once: true, amount: 0 }}
+                    >
+                        <motion.div
+                            variants={item}
+                        >
                             <h4 className='text-[20px] text-white mb-[20px] font-semibold'>Pages</h4>
                             <ul className='grid gap-[15px]'>
                                 {renderFooterLinks(MAIN_PAGES)}
                             </ul>
-                        </div>
+                        </motion.div>
                         
-                        <div>
+                        <motion.div
+                            variants={item}
+                        >
                             <h4 className='text-[20px] text-white mb-[20px] font-semibold'>Utility Pages</h4>
                             <ul className='grid gap-[15px]'>
                                 {renderFooterLinks(UTIL_PAGES)}
                             </ul>
-                        </div>
+                        </motion.div>
                         
-                        <div>
+                        <motion.div
+                            variants={item}
+                        >
                             <h4 className='text-[20px] text-white mb-[20px] font-semibold'>Contact info</h4>
                             
                             <div className='mb-[60px] grid gap-5'>
@@ -99,8 +124,8 @@ export default function Footer() {
                                     {renderSocialIcons}
                                 </ul>
                             </div>
-                        </div>
-                    </div>
+                        </motion.div>
+                    </motion.div>
 
                     <div>
                         <h4 className='text-base text-white mb-[20px] font-medium'>
@@ -113,7 +138,12 @@ export default function Footer() {
                 </div>
 
                 <div>
-                    <div className='mb-[60px] '>
+                    <motion.div className='mb-[60px] '
+                        variants={fadeIn("up", 0.5, 0)}
+                        initial="offscreen"
+                        whileInView="onscreen"
+                        viewport={{ once: true, amount: 0 }}
+                    >
                         <h1 className='text-white mb-[30px] leading-tight text-[30px] xsm:text-[40px] sm:text-[48px] md:text-[52px] lg:text-[55px]'> 
                             We ship worldwide.
                             Ready to ship with us?
@@ -122,9 +152,14 @@ export default function Footer() {
                         <button className='bg-[#282dad] hover:translate-y-3 py-3 px-[34px] text-[#f6f6f6]'>
                             Ship your package
                         </button>
-                    </div>
+                    </motion.div>
 
-                    <figure>
+                    <motion.figure
+                        variants={ScaleUp(0.5, 0)}
+                        initial="offscreen"
+                        whileInView="onscreen"
+                        viewport={{ once: true, amount: 0 }}
+                    >
                         <Image 
                             src='/map.png'
                             className=''
@@ -132,7 +167,7 @@ export default function Footer() {
                             width={722}
                             height={320}
                         />
-                    </figure>
+                    </motion.figure>
                 </div>
             </div>
         </div>

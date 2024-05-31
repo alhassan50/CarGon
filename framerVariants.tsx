@@ -23,3 +23,91 @@ export const fadeIn = (direction: string, duration: number, delay: number) => {
         },
     },
 }};
+
+export const container = {
+    offscreen: { opacity: 1, scale: 0 },
+    onscreen: {
+      opacity: 1,
+      scale: 1,
+      transition: {
+        delayChildren: 0.3,
+        staggerChildren: 0.1,
+      }
+    }
+};
+  
+export const item = {
+    offscreen: { x: -20, y: 20, opacity: 0 },
+    onscreen: {
+      x: 0,
+      y: 0,
+      opacity: 1,
+      transition: {
+        duration: .5
+      }
+    }
+};
+
+export const ScaleUp = (duration: number ,delay: number) => {
+    return {
+    offscreen: {
+        y: 50,
+        opacity: 0,
+        scale: 0.8,
+        transition: {
+          type: 'tween',
+          duration: duration,
+          delay: delay,
+          ease: [0.1, 0.1, 0.1, .15],
+        },
+    },
+    onscreen: {
+        y: 0,
+        opacity: 1,
+        scale: 1,
+        transition: {
+          type: 'tween',
+          duration: duration,
+          delay: delay,
+          ease: [0.1, 0.1, 0.1, .15],
+        },
+    },
+}};
+
+export const Scale = (duration: number ,delay: number) => {
+    return {
+    offscreen: {
+        opacity: 0,
+        scale: 0.8,
+        transition: {
+          type: 'tween',
+          duration: duration,
+          delay: delay,
+          ease: [0.1, 0.1, 0.1, .15],
+        },
+    },
+    onscreen: {
+        opacity: 1,
+        scale: 1,
+        transition: {
+          type: 'tween',
+          duration: duration,
+          delay: delay,
+          ease: [0.1, 0.1, 0.1, .15],
+        },
+    },
+}};
+
+export const flipX = {
+    offscreen: { opacity: 0, scaleX: 0 },
+    onscreen: {
+      opacity: 1,
+      scaleX: 1,
+      transition: {
+        type: 'tween',
+        duration: 0.5,
+        delay: 0.2,
+        ease: [0.25, 0.5, 0.5, 0.75],
+      }
+    }
+};

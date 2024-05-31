@@ -6,7 +6,7 @@ import ServicesSection from "./components/home/ServicesSection";
 
 import { Metadata } from 'next';
 export const metadata: Metadata = {
-  title: "Home",
+  title: "Home | Cargon",
   description: "Home page"
 };
 

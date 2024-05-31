@@ -1,6 +1,13 @@
+'use client'
+
 import React from 'react'
 import Image from 'next/image';
+import { motion } from 'framer-motion';
 
+//framer variant
+import { fadeIn, flipX, Scale } from '@/framerVariants';
+
+//data
 const HOW_IT_WORKS = [
     {
         step: "01",
@@ -45,7 +52,13 @@ export default function HowItWorks() {
 
         <div className='grid gap-10 sm-lg:grid-cols-2 px-[15px] md:px-[20px] sm-lg:px-[30px] lg:px-[50px] x-lg:px-[70px]'>
             <div className='relative sm-lg:absolute sm-lg:bottom-[50px]'>
-                <div className='w-[50%]'>
+                <motion.div 
+                    className='w-[50%]'
+                    variants={Scale(0.5, 0)}
+                    initial="offscreen"
+                    whileInView="onscreen"
+                    viewport={{ once: true, amount: 0 }}
+                >
                     <h2 className='mb-[40px] text-white'>
                         How It Works
                     </h2>
@@ -53,19 +66,29 @@ export default function HowItWorks() {
                     <ul className='grid gap-[30px] sm-lg:grid-cols-3'>
                         {
                             HOW_IT_WORKS.map(level => (
-                                <li key={level.step} className=''>
-                                    <div className='mb-[30px] w-10 h-10 bg-[rgba(255,255,255,.1)] flex justify-center items-center rounded-[50%]'>
-                                        <p className='text-white text-lg font-medium '>{level.step}</p>
-                                    </div>
-                                    
-                                    <h4 className='text-white mb-[10px]'>{level.title}</h4>
-                                    <p className='text-[#b9b9b9] text-lg mb-[10px]'>{level.description}</p>
+                                <li 
+                                    key={level.step} 
+                                    className=''
+                                >
+                                    <motion.div
+                                        variants={flipX}
+                                        initial="offscreen"
+                                        whileInView="onscreen"
+                                        viewport={{ once: true, amount: 0 }}
+                                    >
+                                        <div className='mb-[30px] w-10 h-10 bg-[rgba(255,255,255,.1)] flex justify-center items-center rounded-[50%]'>
+                                            <p className='text-white text-lg font-medium '>{level.step}</p>
+                                        </div>
+                                        
+                                        <h4 className='text-white mb-[10px]'>{level.title}</h4>
+                                        <p className='text-[#b9b9b9] text-lg mb-[10px]'>{level.description}</p>
+                                    </motion.div>
                                 </li>
                             ))
                         }
                     </ul>
                     
-                </div>
+                </motion.div>
             </div>
 
             <div className='hidden sm-lg:block'></div>
@@ -77,7 +100,12 @@ export default function HowItWorks() {
                     </h2>
                 </div>
                 
-                <form>
+                <motion.form
+                    variants={fadeIn("up", 0.5, 0)}
+                    initial="offscreen"
+                    whileInView="onscreen"
+                    viewport={{ once: true, amount: 0 }}
+                >
                     <div className='grid md:grid-cols-2 md:gap-5'>
                         <div className='input-section quote-form'>
                             <input 
@@ -178,7 +206,7 @@ export default function HowItWorks() {
                     <button className='bg-primaryBlue hover:translate-y-3 max-w-[200px] border mt-[30px] border-primaryBlack text-white px-[34px] py-3 w-full md:text-lg'>
                         Submit
                     </button>
-                </form>
+                </motion.form>
             </div>
         </div>
         
