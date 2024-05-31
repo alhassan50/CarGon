@@ -29,14 +29,14 @@ export default function Navbar() {
             {
                 item.to ?
                 <Link 
-                    className={`z-50 pb-[3px] navbar-links max-w-full ${item.to === pathname ? 'active-link' : null}`} 
+                    className={`z-50 pb-[3px] font-medium navbar-links max-w-full ${item.to === pathname ? 'active-link' : null}`} 
                     href={item.to}
                 >
                     {item.title}
                 </Link>
                 :
                 <div className='z-50 relative pb-[3px] min-w-full flex flex-col justify-between items-start gap-1 group cursor-pointer'>
-                    <div className='flex gap-1 justify-between w-full'>
+                    <div className='flex gap-1 font-medium justify-between w-full'>
                         {item.title}
                         <MdOutlineKeyboardArrowDown className='text-[24px]' />
                     </div>
