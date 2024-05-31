@@ -6,7 +6,7 @@ import Link from 'next/link'
 import { motion } from 'framer-motion'
 
 //framer variants
-import { fadeIn, flipX, Scale } from '@/framerVariants'
+import { fadeIn, flipX, scaleCenter } from '@/framerVariants'
 
 export default function Mission() {
   return (

@@ -12,7 +12,7 @@ import { UTIL_PAGES } from '@/app/data/utilsPages'
 import { SOCIAL_ICONS } from '@/app/data/socialIcons'
 
 //framer variant
-import { fadeIn, container, item, ScaleUp } from '@/framerVariants'
+import { fadeIn, container, item, scaleUp } from '@/framerVariants'
 
 const renderFooterLinks = (pages: PageList) => {
     return pages.map(page => (

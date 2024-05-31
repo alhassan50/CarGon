@@ -10,7 +10,7 @@ import ValuesCard from './ValuesCard'
 import { OUR_VALUES } from '@/app/data/ourValues'
 
 //framer variants
-import { container, Scale } from '@/framerVariants'
+import { container, scaleCenter } from '@/framerVariants'
 
 const renderValuesCards = OUR_VALUES.map(value => (
     <li key={value.title}>

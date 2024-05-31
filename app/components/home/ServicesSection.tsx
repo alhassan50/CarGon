@@ -10,7 +10,7 @@ import {SERVICES} from '@/app/data/services'
 import Service from './Service'
 
 //framer variant
-import { ScaleUp, Scale } from '@/framerVariants'
+import { scaleUp, scaleCenter } from '@/framerVariants'
 
 const renderServices = SERVICES.map((service, index) => (
     <Link href={'/service-details'} key={service.title}>

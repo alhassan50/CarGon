@@ -5,7 +5,7 @@ import Image from 'next/image';
 import { motion } from 'framer-motion';
 
 //framer variant
-import { fadeIn, flipX, Scale } from '@/framerVariants';
+import { fadeIn, flipX, scaleCenter } from '@/framerVariants';
 
 //data
 const HOW_IT_WORKS = [

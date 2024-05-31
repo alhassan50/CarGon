@@ -4,7 +4,7 @@ import React from 'react'
 import { motion } from 'framer-motion'
 
 //framer variants
-import { ScaleUp } from '@/framerVariants'
+import { scaleUp } from '@/framerVariants'
 
 export default function ContactForm() {
   return (
