@@ -1,10 +1,9 @@
 import React from 'react'
-import Image from 'next/image'
+
 import DetailsHero from '../components/service-details/DetailsHero'
 import ContactInfo from '../components/service-details/ContactInfo'
 import Details from '../components/service-details/Details'
-
-import { SERVICES } from '@/app/data/services'
+import FreightServices from '../components/service-details/FreightServices'
 
 export default function ServiceDetails() {
   return (
@@ -15,9 +14,8 @@ export default function ServiceDetails() {
                 <Details />
                 <ContactInfo />
             </div>
-        </div>
-
-        
+            <FreightServices />
+        </div>        
     </main>
   )
 }
