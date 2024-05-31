@@ -5,6 +5,12 @@ import ContactInfo from '../components/service-details/ContactInfo'
 import Details from '../components/service-details/Details'
 import FreightServices from '../components/service-details/FreightServices'
 
+import { Metadata } from 'next';
+export const metadata: Metadata = {
+  title: "Service Details",
+  description: "Service Details page"
+};
+
 export default function ServiceDetails() {
   return (
     <main>

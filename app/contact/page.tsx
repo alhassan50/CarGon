@@ -6,7 +6,7 @@ import ContactHero from '../components/contact/ContactHero'
 import ContactInfo from '../components/contact/ContactInfo'
 
 export const metadata: Metadata = {
-  title: 'Contact | Cargon',
+  title: 'Contact',
 }
 
 export default function Contact() {

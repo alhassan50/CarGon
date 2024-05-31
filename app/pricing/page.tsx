@@ -4,6 +4,12 @@ import Link from 'next/link'
 
 import { SERVICES } from '../data/services'
 
+import { Metadata } from 'next';
+export const metadata: Metadata = {
+  title: "Pricing",
+  description: "Pricing page"
+};
+
 export default function Pricing() {
   return (
     <main>

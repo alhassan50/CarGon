@@ -5,6 +5,12 @@ import { useRouter, useSearchParams } from 'next/navigation';
 import { BLOGS } from '@/app/data/blog';
 import BlogCard from '../components/home/BlogCard';
 
+/* import { Metadata } from 'next';
+export const metadata: Metadata = {
+  title: "Blogs",
+  description: "Blogs page"
+}; */
+
 function BlogContent() {
     const searchParams = useSearchParams();
     const router = useRouter();

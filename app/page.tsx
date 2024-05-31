@@ -4,6 +4,12 @@ import HowItWorks from "./components/home/HowItWorks";
 import Mission from "./components/home/Mission";
 import ServicesSection from "./components/home/ServicesSection";
 
+import { Metadata } from 'next';
+export const metadata: Metadata = {
+  title: "Home",
+  description: "Home page"
+};
+
 export default function Home() {
   return (
     <main>

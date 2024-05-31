@@ -5,6 +5,12 @@ import TeamCard from '../components/about/TeamCard'
 //data
 import {TEAM_MEMBERS} from '@/app/data/team' 
 
+import { Metadata } from 'next';
+export const metadata: Metadata = {
+  title: "Team",
+  description: "Team page"
+};
+
 const renderTeam = TEAM_MEMBERS.map(member => (
     <li key={member.name} className='group overflow-hidden'>
         <TeamCard member={member} />
