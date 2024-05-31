@@ -74,6 +74,12 @@ type Service = {
     desc: string;
     image: string;
     weight: string;
+    features: string[];
+    pricing: {
+        amount: number;
+        unit: string;
+    };
+    servicePricingImage: string;
 }
 
 type ServiceList = Service[]
