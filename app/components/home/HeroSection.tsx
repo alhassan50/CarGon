@@ -2,6 +2,7 @@ import React from 'react'
 import Image from 'next/image'
 
 import {BRANDS} from '@/app/data/brands'
+import Link from 'next/link';
 
 const FEATURES = [
     "Safe Packing",
@@ -117,9 +118,11 @@ export default function HeroSection() {
                         </ul>
                         
                         <div className='flex gap-5 flex-wrap'>
-                            <button className='bg-primaryBlue hover:translate-y-3 border border-primaryBlack text-white px-[34px] py-3 md:text-lg'>
-                                Read more about
-                            </button>
+                            <Link href='/about'>
+                                <button className='bg-primaryBlue hover:translate-y-3 border border-primaryBlack text-white px-[34px] py-3 md:text-lg'>
+                                    Read more about
+                                </button>
+                            </Link>
                             <div className='flex gap-2 items-center'>
                                 <figure className='bg-[#f6f6f6] w-[40px] h-[40px] flex justify-center items-center rounded-[50%]'>
                                     <Image 

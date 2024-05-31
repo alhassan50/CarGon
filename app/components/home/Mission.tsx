@@ -1,5 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
+import Link from 'next/link'
 
 export default function Mission() {
   return (
@@ -58,9 +59,11 @@ export default function Mission() {
                     </div>
                 </div>
 
-                <button className='bg-[#282dad] hover:translate-y-3 py-3 px-[34px] text-[#f6f6f6]'>
-                    Know more about us
-                </button>
+                <Link href={'/about'}>
+                    <button className='bg-[#282dad] hover:translate-y-3 py-3 px-[34px] text-[#f6f6f6]'>
+                        Know more about us
+                    </button>
+                </Link>
             </div>
         </div>
     </section>

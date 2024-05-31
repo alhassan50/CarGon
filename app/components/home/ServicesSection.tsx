@@ -1,17 +1,19 @@
 import React from 'react'
 import Image from 'next/image'
+import Link from 'next/link'
 
 //data
 import {SERVICES} from '@/app/data/services'
 import Service from './Service'
 
 const renderServices = SERVICES.map((service, index) => (
-    <li 
-        key={service.title} 
-        className='border-b-[#18192e] border-b-2 cursor-pointer group opacity-50 hover:opacity-[100%] transition-all duration-300'
-    >
-        <Service index={index} service={service} />
-    </li>
+    <Link href={'/service-details'} key={service.title}>
+        <li  
+            className='border-b-[#18192e] border-b-2 cursor-pointer group opacity-50 hover:opacity-[100%] transition-all duration-300'
+        >
+            <Service index={index} service={service} />
+        </li>
+    </Link>
 ))
 
 export default function ServicesSection() {
