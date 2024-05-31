@@ -5,7 +5,7 @@ export default function DetailsHero() {
   return (
     <section className='pt-[20px] pb-[40px] xl:pt-[30px] xl:pb-[60px]'>
         <div className='relative bg-primaryBlack px-5 xsm:px-10 xl:px-[50px] py-[60px] x-lg:px-[80px] sm-lg:py-[0px]'>
-            <div className='flex flex-wrap items-center justify-between'>
+            <div className='flex flex-wrap items-center justify-center xsm:justify-between'>
                 <h1 className='text-white text-center'>
                         Air freight
                 </h1>

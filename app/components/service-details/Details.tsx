@@ -5,7 +5,7 @@ export default function Details() {
   return (
     <section>
         <div>
-            <h3 className="mb-[10px] text-lg xsm:text-[20px] md:text-[24px] font-semibold">
+            <h3 className="mb-[10px] text-[22px] md:text-[30px] font-semibold">
                 Air freight excellence: Swift, Secure, and Global
             </h3>
 
@@ -23,7 +23,7 @@ export default function Details() {
                 />
             </figure>
 
-            <h3 className="mb-[10px] text-lg xsm:text-[20px] md:text-[24px] font-semibold">
+            <h3 className="mb-[10px] text-[22px] md:text-[30px] font-semibold">
                 What is included in this service
             </h3>
 
@@ -34,7 +34,7 @@ export default function Details() {
 
         <div className='mt-5 mb-[60px] grid gap-[30px]'>
             <div>
-                <h3 className="mb-[10px] text-lg xsm:text-[20px] md:text-[24px] font-semibold">
+                <h3 className="mb-[10px] text-[22px] md:text-[30px] font-semibold">
                     Express Shipping:
                 </h3>
 
@@ -44,7 +44,7 @@ export default function Details() {
             </div>
             
             <div>
-                <h3 className="mb-[10px] text-lg xsm:text-[20px] md:text-[24px] font-semibold">
+                <h3 className="mb-[10px] text-[22px] md:text-[30px] font-semibold">
                     Custom Solutions:   
                 </h3>
 
@@ -54,7 +54,7 @@ export default function Details() {
             </div>
             
             <div>
-                <h3 className="mb-[10px] text-lg xsm:text-[20px] md:text-[24px] font-semibold">
+                <h3 className="mb-[10px] text-[22px] md:text-[30px] font-semibold">
                     Advanced Tracking:   
                 </h3>
 
@@ -76,7 +76,7 @@ export default function Details() {
             </figure>
             
             <div>
-                <h3 className="mb-[10px] text-lg xsm:text-[20px] md:text-[24px] font-semibold">
+                <h3 className="mb-[10px] text-[22px] md:text-[30px] font-semibold">
                     Why choose air freight?
                 </h3>
 
