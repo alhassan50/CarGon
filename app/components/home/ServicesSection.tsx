@@ -3,7 +3,7 @@
 import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
-import { motion } from 'framer-motion'
+import { motion, useScroll, useTransform } from 'framer-motion'
 
 //data
 import {SERVICES} from '@/app/data/services'
@@ -23,6 +23,11 @@ const renderServices = SERVICES.map((service, index) => (
 ))
 
 export default function ServicesSection() {
+    const { scrollYProgress } = useScroll();
+
+    // Map scroll progress (0 to 1) to x-axis movement (e.g., 0 to 500px)
+    const x = useTransform(scrollYProgress, [0, 1], [0, 1000]);
+
   return (
     <div className='-mx-[15px] md:-mx-[20px] sm-lg:-mx-[30px] lg:-mx-[50px] x-lg:-mx-[70px]'>
             <figure className='hidden sm-lg:block relative ml-auto -mt-[130px] mb-20 w-[75%]'>
@@ -33,6 +38,21 @@ export default function ServicesSection() {
                     height={416}
                     className='w-full h-auto right-0'
                 />
+
+                <motion.figure
+                    style={{
+                        x, // Apply the x-axis transformation
+                    }}
+                    className='absolute top-[92%] left-[20%]'
+                >
+                    <Image 
+                        src={'/pathfinder.svg'}
+                        alt=''
+                        width={(840-350)}
+                        height={(416-350)}
+                        className='w-[120px] h-auto'
+                    />
+                </motion.figure>
             </figure>
         <section className='services-section-content pb-[50px] md:pb-[70px] lg:pb-[100px]'>
             <div className='mb-[30px]'>
