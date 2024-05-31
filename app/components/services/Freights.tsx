@@ -1,20 +1,39 @@
+'use client'
+
 import React from 'react'
 import Image from 'next/image'
+import { motion } from 'framer-motion'
 
+//framer variants
+import { flipX } from '@/framerVariants'
+
+//data
 import { SERVICES } from '@/app/data/services'
 
 export default function Freights() {
   return (
     <section className='relative pb-[40px] md:pb-[50px] sm-lg:pb-[70px] xl:pb-[100px]'>
         <div className='grid gap-[30px] lg:gap-10 md:grid-cols-2 xl:grid-cols-3'>
-            <div>
+            <motion.div
+                variants={flipX}
+                initial="offscreen"
+                whileInView="onscreen"
+                viewport={{ once: true, amount: 0 }}
+            >
                 <h2 className='mb-[10px]'>Transportation services hub</h2>
                 <p className='mb-[10px] text-lg'>Explore our comprehensive range of transport services designed to move goods efficiently, reliably, and securely.</p>
-            </div>
+            </motion.div>
 
             {
                 SERVICES.map(service => (
-                    <div className='p-[30px] relative group overflow-hidden flex justify-between flex-col bg-[#f6f6f6] cursor-pointer' key={service.title}>
+                    <motion.div 
+                        className='p-[30px] relative group overflow-hidden flex justify-between flex-col bg-[#f6f6f6] cursor-pointer' 
+                        key={service.title}
+                        variants={flipX}
+                        initial="offscreen"
+                        whileInView="onscreen"
+                        viewport={{ once: true, amount: 0 }}
+                    >
                         <figure className='mb-[60px]'>
                             <Image 
                                 src={service.image}
@@ -43,7 +62,7 @@ export default function Freights() {
                                 className='group-hover:-rotate-45 transition-all duration-500'
                             />
                         </figure>
-                    </div>
+                    </motion.div>
                 ))
             }
         </div>

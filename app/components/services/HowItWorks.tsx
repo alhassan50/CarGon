@@ -1,5 +1,11 @@
+'use client'
+
 import React from 'react'
-import Image from 'next/image';
+import Image from 'next/image'
+import { motion } from 'framer-motion'
+
+//framer variants
+import { container, fadeIn, item, scaleCenter } from '@/framerVariants'
 
 const HOW_IT_WORKS = [
     {
@@ -25,7 +31,13 @@ export default function HowItWorks() {
 
         <div className='grid sm-lg:grid-cols-[1fr,1.25fr]'>
 
-            <figure className='sm-lg:relative'>
+            <motion.figure 
+                className='sm-lg:relative'
+                variants={scaleCenter(0.5, 0)}
+                initial="offscreen"
+                whileInView="onscreen"
+                viewport={{ once: true, amount: 0 }}
+            >
                 <Image 
                     src={'/howitworks.jpg'}
                     alt=''
@@ -33,27 +45,43 @@ export default function HowItWorks() {
                     height={500}
                     className='h-full w-full object-cover inline-block sm-lg:absolute top-0 left-0 '
                 />
-            </figure>
+            </motion.figure>
 
             <div className='bg-primaryBlack relative px-[40px] py-10 pb-[60px] '>
-                <h2 className='mb-[40px] text-white'>
+                <motion.h2 
+                    className='mb-[40px] text-white'
+                    variants={fadeIn("up", 0.5, 0)}
+                    initial="offscreen"
+                    whileInView="onscreen"
+                    viewport={{ once: true, amount: 0 }}
+                >
                     How It Works
-                </h2>
+                </motion.h2>
 
-                <ul className='grid gap-[30px] sm-lg:grid-cols-3'>
+                <motion.ul 
+                    className='grid gap-[30px] sm-lg:grid-cols-3'
+                    variants={container}
+                    initial="offscreen"
+                    whileInView="onscreen"
+                    viewport={{ once: true, amount: 0 }}
+                >
                     {
                         HOW_IT_WORKS.map(level => (
-                            <li key={level.step} className=''>
+                            <motion.li 
+                                key={level.step} 
+                                className=''
+                                variants={item}
+                            >
                                 <div className='mb-[30px] w-10 h-10 bg-[rgba(255,255,255,.1)] flex justify-center items-center rounded-[50%]'>
                                     <p className='text-white text-lg font-medium '>{level.step}</p>
                                 </div>
                                 
                                 <h4 className='text-white mb-[10px]'>{level.title}</h4>
                                 <p className='text-[#b9b9b9] text-lg mb-[10px]'>{level.description}</p>
-                            </li>
+                            </motion.li>
                         ))
                     }
-                </ul>
+                </motion.ul>
                 
                 <div className="absolute hidden xsm:block h-[10%] w-[20%] bottom-[0px] sm-lg:top-0 right-0 bg-white "></div>
             </div>

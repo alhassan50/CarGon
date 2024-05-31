@@ -1,6 +1,13 @@
+'use client'
+
 import React from 'react'
 import Image from 'next/image'
+import { motion } from 'framer-motion'
 
+//framer variants
+import { container, fadeIn, item } from '@/framerVariants'
+
+//data
 import {PRICING_PLANS} from '@/app/data/pricing'
 
 export default function Pricing() {
@@ -8,14 +15,31 @@ export default function Pricing() {
     <section className='pb-[40px] md:pb-[50px] sm-lg:pb-[70px] xl:pb-[100px] x-lg:pb-[150px]'>
         <div>
             <div className='mb-[40px]'>
-                <h1 className='mb-[10px] text-center'>Pricing plans</h1>
+                <motion.h1 
+                    className='mb-[10px] text-center'
+                    variants={fadeIn("up", 0.5, 0)}
+                    initial="offscreen"
+                    whileInView="onscreen"
+                    viewport={{ once: true, amount: 0 }}
+                >
+                    Pricing plans
+                </motion.h1>
             </div>
 
             <div>
-                <ul className='grid md:grid-cols-2 lg:grid-cols-3 gap-[30px]'>
+                <motion.ul 
+                    className='grid md:grid-cols-2 lg:grid-cols-3 gap-[30px]'
+                    variants={container}
+                    initial="offscreen"
+                    whileInView="onscreen"
+                    viewport={{ once: true, amount: 0 }}
+                >
                     {
                         PRICING_PLANS.map(plan => (
-                            <li className={`p-5 lg:p-[30px] flex justify-between ${plan.plan === 'Advance' ? 'bg-primaryBlue lg:mb-[50px]' : 'bg-[#f6f6f6] lg:mt-[50px]'}`} key={plan.plan}>
+                            <motion.li 
+                                className={`p-5 lg:p-[30px] flex justify-between ${plan.plan === 'Advance' ? 'bg-primaryBlue lg:mb-[50px]' : 'bg-[#f6f6f6] lg:mt-[50px]'}`} key={plan.plan}
+                                variants={item}
+                            >
                                 <div className='grid gap-[20px] w-full'>
                                     <div>
                                         <h3 className={`text-[30px] mb-[20px] font-semibold ${plan.plan === 'Advance' ? 'text-white' : 'text-primaryBlue'}`}>
@@ -62,10 +86,10 @@ export default function Pricing() {
                                         Get Started
                                     </button>
                                 </div>
-                            </li>
+                            </motion.li>
                         ))
                     }
-                </ul>
+                </motion.ul>
             </div>
         </div>
     </section>
