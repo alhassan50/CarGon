@@ -1,11 +1,22 @@
+'use client'
+
 import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
+import { motion } from 'framer-motion'
+
+//framer variants
+import { fadeIn } from '@/framerVariants'
 
 export default function Info() {
   return (
     <div className='grid gap-[30px]'>
-        <div>
+        <motion.div
+            variants={fadeIn("right", 0.5, 0)}
+            initial="offscreen"
+            whileInView="onscreen"
+            viewport={{ once: true, amount: 0 }}
+        >
             <h2 className='mb-[10px]'>
                 Need any help?
             </h2>
@@ -13,9 +24,14 @@ export default function Info() {
             <p className='text-lg'>
                 Contact us today, and our dedicated team will provide swift and tailored assistance to meet your transportation needs.
             </p>
-        </div>
+        </motion.div>
         
-        <div>
+        <motion.div
+            variants={fadeIn("right", 0.5, 0)}
+            initial="offscreen"
+            whileInView="onscreen"
+            viewport={{ once: true, amount: 0 }}
+        >
             <h4 className='mb-[10px] font-[600]'>
                 Opening Hours
             </h4>
@@ -27,9 +43,14 @@ export default function Info() {
             <p className='text-lg'>
                 Sat-Sun: Close
             </p>
-        </div>
+        </motion.div>
         
-        <div>
+        <motion.div
+            variants={fadeIn("right", 0.5, 0)}
+            initial="offscreen"
+            whileInView="onscreen"
+            viewport={{ once: true, amount: 0 }}
+        >
             <h4 className='mb-[10px] font-[600]'>
                 Address
             </h4>
@@ -41,9 +62,14 @@ export default function Info() {
             <p className='text-lg'>
                 MI 48042
             </p>
-        </div>
+        </motion.div>
         
-        <div>
+        <motion.div
+            variants={fadeIn("right", 0.5, 0)}
+            initial="offscreen"
+            whileInView="onscreen"
+            viewport={{ once: true, amount: 0 }}
+        >
             <h4 className='mb-[10px] font-[600]'>
                 Address
             </h4>
@@ -55,9 +81,15 @@ export default function Info() {
             <p className='text-lg'>
                 example@gmail.com
             </p>
-        </div>
+        </motion.div>
         
-        <div className='flex gap-[15px]'>
+        <motion.div 
+            className='flex gap-[15px]'
+            variants={fadeIn("right", 0.5, 0)}
+            initial="offscreen"
+            whileInView="onscreen"
+            viewport={{ once: true, amount: 0 }}    
+        >
             <Link href={'#'}>
                 <figure className='hover:translate-y-1 transition-all duration-300'>
                     <Image 
@@ -101,7 +133,7 @@ export default function Info() {
                     />
                 </figure>
             </Link>
-        </div>
+        </motion.div>
     </div>
   )
 }

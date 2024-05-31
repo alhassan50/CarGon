@@ -1,8 +1,20 @@
+'use client'
+
 import React from 'react'
+import { motion } from 'framer-motion'
+
+//framer variants
+import { ScaleUp } from '@/framerVariants'
 
 export default function ContactForm() {
   return (
-    <div className='bg-[#f6f6f6] p-5 md:p-10'>
+    <motion.div 
+        className='bg-[#f6f6f6] p-5 md:p-10'
+        variants={ScaleUp(0.5, 0)}
+        initial="offscreen"
+        whileInView="onscreen"
+        viewport={{ once: true, amount: 0 }}
+    >
         <form>
             <div className='input-section'>
                 <label>
@@ -50,6 +62,6 @@ export default function ContactForm() {
                 Submit
             </button>
         </form>
-    </div>
+    </motion.div>
   )
 }
