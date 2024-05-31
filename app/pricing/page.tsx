@@ -81,18 +81,18 @@ export default function Pricing() {
                                             </div>
 
                                             <div className='flex items-end justify-between'>
-                                                <button className='text-white font-medium text-[38px] py-[8px] px-[15px] bg-primaryBlue'>
+                                                <button className='text-white font-medium text-xl py-[8px] px-[10px] xsm:p-[14px] xsm:text-[26px] md:px-[16px] sm-lg:text-[32px] xl:text-[38px] bg-primaryBlue'>
                                                     ${service.pricing.amount}<span className='text-lg'>{service.pricing.unit}</span>
                                                 </button>
 
-                                                <div className='bg-white w-[100px] h-[100px] flex justify-center items-center'>
+                                                <div className='bg-white w-[50px] h-[50px] sm-lg:w-[100px] sm-lg:h-[100px] flex justify-center items-center'>
                                                     <figure>
                                                         <Image 
                                                             src={'/arrow.svg'}
                                                             alt='black arrow'
                                                             width={50}
                                                             height={50}
-                                                            className='group-hover:-rotate-45 transition-all duration-500'
+                                                            className='w-[30px] h-auto sm-lg:w-[50px] group-hover:-rotate-45 transition-all duration-500'
                                                         />
                                                     </figure>
                                                 </div>
