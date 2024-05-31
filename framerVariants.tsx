@@ -48,7 +48,7 @@ export const item = {
     }
 };
 
-export const ScaleUp = (duration: number ,delay: number) => {
+export const scaleUp = (duration: number ,delay: number) => {
     return {
     offscreen: {
         y: 50,
@@ -100,7 +100,7 @@ export const scaleDown = (duration: number ,delay: number) => {
     },
 }};
 
-export const Scale = (duration: number ,delay: number) => {
+export const scaleCenter = (duration: number ,delay: number) => {
     return {
     offscreen: {
         opacity: 0,

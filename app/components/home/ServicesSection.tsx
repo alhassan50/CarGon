@@ -38,7 +38,7 @@ export default function ServicesSection() {
             <div className='mb-[30px]'>
                 <motion.h2 
                     className='mb-[10px] text-[36px] xsm:text-[40x] md:text-[48px] xl:text-[52px]'
-                    variants={Scale(0.5, 0)}
+                    variants={scaleCenter(0.5, 0)}
                     initial="offscreen"
                     whileInView="onscreen"
                     viewport={{ once: true, amount: 0 }}
@@ -48,7 +48,7 @@ export default function ServicesSection() {
             </div>
             <motion.ul 
                 className='grid gap-[30px] sm-lg:gap-[60px]'
-                variants={ScaleUp(0.5, 0)}
+                variants={scaleUp(0.5, 0)}
                 initial="offscreen"
                 whileInView="onscreen"
                 viewport={{ once: true, amount: 0 }}

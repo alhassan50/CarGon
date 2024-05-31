@@ -24,7 +24,7 @@ export default function ValuesSection() {
         <div className='mb-[30px] grid gap-[10px] md:grid-cols-2 md:gap-[30px] sm-lg:gap-[40px] xl:gap-[100px]'>
             <motion.h2 
                 className='mb-[10px] md:text-[48px] xl:text-[55px]'
-                variants={Scale(0.5, 0)}
+                variants={scaleCenter(0.5, 0)}
                 initial="offscreen"
                 whileInView="onscreen"
                 viewport={{ once: true, amount: 0 }}
@@ -34,7 +34,7 @@ export default function ValuesSection() {
 
             <motion.p 
                 className='mb-[10px] text-lg'
-                variants={Scale(0.5, 0)}
+                variants={scaleCenter(0.5, 0)}
                 initial="offscreen"
                 whileInView="onscreen"
                 viewport={{ once: true, amount: 0 }}

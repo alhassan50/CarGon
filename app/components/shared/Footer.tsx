@@ -155,7 +155,7 @@ export default function Footer() {
                     </motion.div>
 
                     <motion.figure
-                        variants={ScaleUp(0.5, 0)}
+                        variants={scaleUp(0.5, 0)}
                         initial="offscreen"
                         whileInView="onscreen"
                         viewport={{ once: true, amount: 0 }}

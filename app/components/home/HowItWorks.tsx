@@ -54,7 +54,7 @@ export default function HowItWorks() {
             <div className='relative sm-lg:absolute sm-lg:bottom-[50px]'>
                 <motion.div 
                     className='w-[50%]'
-                    variants={Scale(0.5, 0)}
+                    variants={scaleCenter(0.5, 0)}
                     initial="offscreen"
                     whileInView="onscreen"
                     viewport={{ once: true, amount: 0 }}

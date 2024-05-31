@@ -10,7 +10,7 @@ export default function ContactForm() {
   return (
     <motion.div 
         className='bg-[#f6f6f6] p-5 md:p-10'
-        variants={ScaleUp(0.5, 0)}
+        variants={scaleUp(0.5, 0)}
         initial="offscreen"
         whileInView="onscreen"
         viewport={{ once: true, amount: 0 }}
