@@ -10,6 +10,7 @@ export default function BlogCard({blog}: {blog: Blog}) {
                 alt={blog.title}
                 width={500}
                 height={336}
+                className='w-full h-auto'
             />
             <div className='absolute w-full scale-x-0 h-full bg-[#18192e77] top-0 left-0 group-hover:scale-x-100 transition-all duration-500 origin-left'></div>
         </figure>
