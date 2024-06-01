@@ -41,25 +41,27 @@ export default function Navbar() {
                         {item.title}
                         <MdOutlineKeyboardArrowDown className='text-[24px]' />
                     </div>
-                    <div className='sm-lg:absolute top-full left-0 min-w-full bg-[#282dad] py-2 px-5 group-hover:block translate-y-8 opacity-0 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300 hidden sm-lg:block border border-[#18192e] z-50'>
-                        <ul> 
-                            {item.dropdownItems?.map(dropdownItem => (
-                                <li 
-                                    className='text-white h-full flex justify-start items-start'
-                                    key={dropdownItem.to} 
-                                >
-                                    {
-                                        dropdownItem.to &&
-                                        <Link 
-                                            href={dropdownItem.to} 
-                                            className='whitespace-nowrap py-1 hover:underline'
-                                        >
-                                            {dropdownItem.title}
-                                        </Link>
-                                    }
-                                </li>
-                            ))}
-                        </ul>
+                    <div className='pointer-events-none group-hover:pointer-events-auto'>
+                        <div className='sm-lg:absolute top-full left-0 min-w-full bg-[#282dad] py-2 px-5 group-hover:block translate-y-8 opacity-0 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300 hidden sm-lg:block border border-[#18192e] z-50'>
+                            <ul className=''> 
+                                {item.dropdownItems?.map(dropdownItem => (
+                                    <li 
+                                        className='text-white h-full flex justify-start items-start'
+                                        key={dropdownItem.to} 
+                                    >
+                                        {
+                                            dropdownItem.to &&
+                                            <Link 
+                                                href={dropdownItem.to} 
+                                                className='whitespace-nowrap py-1 hover:underline'
+                                            >
+                                                {dropdownItem.title}
+                                            </Link>
+                                        }
+                                    </li>
+                                ))}
+                            </ul>
+                        </div>
                     </div>
                 </div>
             }
