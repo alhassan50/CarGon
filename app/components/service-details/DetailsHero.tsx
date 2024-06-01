@@ -1,16 +1,40 @@
+'use client'
+
 import React from 'react'
 import Image from 'next/image'
+import { motion } from 'framer-motion'
+
+//framer variants
+import { scaleCenter, fadeIn } from '@/framerVariants'
 
 export default function DetailsHero() {
   return (
     <section className='pt-[20px] pb-[40px] xl:pt-[30px] xl:pb-[60px]'>
-        <div className='relative bg-primaryBlack px-5 xsm:px-10 xl:px-[50px] py-[60px] x-lg:px-[80px] sm-lg:py-[0px]'>
+        <motion.div 
+            className='relative bg-primaryBlack px-5 xsm:px-10 xl:px-[50px] py-[60px] x-lg:px-[80px] sm-lg:py-[0px]'
+            variants={fadeIn("up", 0.5, 0)}
+            initial="offscreen"
+            whileInView="onscreen"
+            viewport={{ once: true, amount: 0 }}    
+        >
             <div className='flex flex-wrap items-center justify-center xsm:justify-between'>
-                <h1 className='text-white text-center'>
+                <motion.h1 
+                    className='text-white text-center'
+                    variants={scaleCenter(0.5, 0)}
+                    initial="offscreen"
+                    whileInView="onscreen"
+                    viewport={{ once: true, amount: 0 }}
+                >
                         Air freight
-                </h1>
+                </motion.h1>
 
-                <figure className='h-[150px] w-auto md:h-[200px] sm-lg:h-[240px]'>
+                <motion.figure 
+                    className='h-[150px] w-auto md:h-[200px] sm-lg:h-[240px]'
+                    variants={fadeIn("left", .5, 0)}
+                    initial="offscreen"
+                    whileInView="onscreen"
+                    viewport={{ once: true, amount: 0 }}
+                >
                     <Image 
                         src={'/air.svg'}
                         alt=''
@@ -18,10 +42,10 @@ export default function DetailsHero() {
                         height={331}
                         className='transform scale-x-[-1] w-auto h-full'
                     />
-                </figure>
+                </motion.figure>
             </div>
 
-        </div>
+        </motion.div>
     </section>
   )
 }

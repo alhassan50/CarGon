@@ -1,9 +1,21 @@
+'use client'
+
 import React from 'react'
 import Image from 'next/image'
+import { motion } from 'framer-motion'
+
+//framer variants
+import { flipX } from '@/framerVariants'
 
 export default function ContactInfo() {
   return (
-    <aside className='h-full relative'>
+    <motion.aside 
+        className='h-full relative'
+        variants={flipX}
+        initial="offscreen"
+        whileInView="onscreen"
+        viewport={{ once: true, amount: 0 }}
+    >
         <div className='top-[50px] left-0 w-full sticky grid p-[30px] bg-[#f6f6f6] mt-10 sm-lg:mt-0'>
             <h3 className="mb-[10px] text-lg xsm:text-[20px] md:text-[24px] font-semibold">For additional information contact one of our agent</h3>
 
@@ -48,6 +60,6 @@ export default function ContactInfo() {
                 </button>
             </div>
         </div>
-    </aside>
+    </motion.aside>
   )
 }
