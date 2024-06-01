@@ -4,7 +4,7 @@ import React from 'react'
 import { motion } from 'framer-motion'
 
 //framer variants
-import { scaleUp } from '@/framerVariants'
+import { scaleUp, bounce } from '@/framerVariants'
 
 export default function CTASection() {
   return (
@@ -28,14 +28,20 @@ export default function CTASection() {
                 </motion.h2>
 
                 <div className='flex items-center justify-end'>
-                    <div className='relative group w-[150px] h-[150px] flex justify-center items-center border border-primaryBlue rounded-[50%]'>
+                    <motion.div 
+                        className='relative group w-[150px] h-[150px] flex justify-center items-center border border-primaryBlue rounded-[50%]'
+                        variants={bounce}
+                        initial="offscreen"
+                        whileInView="onscreen"
+                        viewport={{ once: true, amount: 0 }}
+                    >
 
                         <h4 className='text-white group-hover:text-primaryBlack transition-all duration-500 z-10'>
                             Let&apos;s Talk
                         </h4>
 
                         <div className='absolute w-3 h-3 opacity-0 rounded-[50%] bg-white group-hover:w-full group-hover:h-full group-hover:opacity-100 transition-all duration-500'></div>
-                    </div>
+                    </motion.div>
 
                 </div>
             </div>
