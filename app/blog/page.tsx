@@ -65,16 +65,20 @@ function BlogContent() {
                     </ul>
                     <div className='mt-[60px] md:mt-[70px] sm-lg:mt-[80px] flex gap-5 justify-between items-center'>
                         {pageNumber > 1 ? (
-                            <motion.button
-                                className='bg-primaryBlue w-full xsm:max-w-[350px] py-3 px-[34px] text-[#f6f6f6]'
-                                onClick={goToPrevPage}
-                                variants={fadeIn("left", 0.5, 0)}
+                            <motion.div
+                                variants={fadeIn("right", 0.5, 0)}
                                 initial="offscreen"
                                 whileInView="onscreen"
                                 viewport={{ once: true, amount: 0 }}
+                                className='w-full xsm:max-w-[350px]'
                             >
-                                Previous
-                            </motion.button>
+                                <button
+                                    className='bg-primaryBlue w-full py-3 px-[34px] text-[#f6f6f6]'
+                                    onClick={goToPrevPage}
+                                >
+                                    Previous
+                                </button>
+                            </motion.div>
                         ) : (
                             <div className='w-full max-w-[350px]'></div>
                         )}
@@ -87,16 +91,20 @@ function BlogContent() {
                             {pageNumber}/2
                         </motion.p>
                         {pageNumber < 2 ? (
-                            <motion.button
-                                className='bg-primaryBlue w-full xsm:max-w-[350px] py-3 px-[34px] text-[#f6f6f6]'
-                                onClick={goToNextPage}
+                            <motion.div
                                 variants={fadeIn("right", 0.5, 0)}
                                 initial="offscreen"
                                 whileInView="onscreen"
                                 viewport={{ once: true, amount: 0 }}
+                                className='w-full xsm:max-w-[350px]'
                             >
-                                Next
-                            </motion.button>
+                                <button
+                                    className='bg-primaryBlue w-full py-3 px-[34px] text-[#f6f6f6]'
+                                    onClick={goToNextPage}
+                                >
+                                    Next
+                                </button>
+                            </motion.div>
                         ) : (
                             <div className='w-full max-w-[350px]'></div>
                         )}
