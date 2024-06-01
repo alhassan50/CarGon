@@ -54,6 +54,7 @@ export default function Navbar() {
                                             <Link 
                                                 href={dropdownItem.to} 
                                                 className='whitespace-nowrap py-1 hover:underline'
+                                                onClick={toggleNavLinksVisibility}
                                             >
                                                 {dropdownItem.title}
                                             </Link>
