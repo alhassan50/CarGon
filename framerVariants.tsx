@@ -137,3 +137,28 @@ export const flipX = {
       }
     }
 };
+
+export const bounce = {
+    offscreen: { opacity: 0,},
+    onscreen: {
+      opacity: 1,
+      transition: {
+        type: 'tween',
+        duration: 2,
+        yoyo: 0,
+        ease: "easeInOut",
+      },
+      y: [
+        "-10rem",
+        "0rem",
+        "-4rem",
+        "0rem",
+        "-3rem",
+        "0rem",
+        "-2rem",
+        "0rem",
+        "-1rem",
+        "0rem",
+      ],
+    }
+};

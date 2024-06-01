@@ -9,7 +9,7 @@ import Link from 'next/link';
 import {BRANDS} from '@/app/data/brands'
 
 //framer variants
-import { fadeIn, container, item } from '@/framerVariants';
+import { fadeIn, container, item, bounce } from '@/framerVariants';
 import HeroBanner from './HeroBanner';
 
 const FEATURES = [
@@ -186,7 +186,13 @@ export default function HeroSection() {
                 </div>
                 
                 <div className='z-30 order-1 sm-lg:order-2'>
-                    <figure className='-mt-[120px] sm-lg:-ml-[50px] sm-lg:-mr-[40px] sticky top-[-10px] md:-mt-[140px] sm-lg:-mt-[170px]'>
+                    <motion.figure 
+                        className='-mt-[120px] sm-lg:-ml-[50px] sm-lg:-mr-[40px] sticky top-[-10px] md:-mt-[140px] sm-lg:-mt-[170px]'
+                        variants={bounce}
+                        initial="offscreen"
+                        whileInView="onscreen"
+                        viewport={{ once: true, amount: 0 }}
+                    >
                         <Image 
                             src={'/hero-img.png'}
                             alt='hero'
@@ -194,7 +200,7 @@ export default function HeroSection() {
                             height={940}
                             className='w-full'
                         />
-                    </figure>
+                    </motion.figure>
                 </div>
             </div>
             
