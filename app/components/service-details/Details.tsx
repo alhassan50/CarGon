@@ -143,9 +143,15 @@ export default function Details() {
                     Why choose air freight?
                 </motion.h3>
 
-                <p className='text-lg mb-[10px] text-[#545454]'>
+                <motion.p 
+                    className='text-lg mb-[10px] text-[#545454]'
+                    variants={fadeIn("up", 0.5, 0)}
+                    initial="offscreen"
+                    whileInView="onscreen"
+                    viewport={{ once: true, amount: 0 }}
+                >
                     Air freight is the fastest mode of transportation, ensuring your goods reach their destination in the shortest time.
-                </p>
+                </motion.p>
 
                 <motion.ul className='grid gap-[15px] mt-[30px]'>
                     <motion.li className='flex gap-2'
