@@ -31,6 +31,7 @@ export default function Navbar() {
                 <Link 
                     className={`z-50 pb-[3px] font-medium navbar-links max-w-full ${item.to === pathname ? 'active-link' : null}`} 
                     href={item.to}
+                    onClick={toggleNavLinksVisibility}
                 >
                     {item.title}
                 </Link>
