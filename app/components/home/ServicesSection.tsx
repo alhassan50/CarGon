@@ -26,7 +26,7 @@ export default function ServicesSection() {
     const { scrollYProgress } = useScroll();
 
     // Map scroll progress (0 to 1) to x-axis movement (e.g., 0 to 500px)
-    const x = useTransform(scrollYProgress, [0, 1], [0, 1000]);
+    const x = useTransform(scrollYProgress, [0, 1], [0, 500]);
 
   return (
     <div className='-mx-[15px] md:-mx-[20px] sm-lg:-mx-[30px] lg:-mx-[50px] x-lg:-mx-[70px]'>
@@ -43,7 +43,7 @@ export default function ServicesSection() {
                     style={{
                         x, // Apply the x-axis transformation
                     }}
-                    className='absolute top-[92%] left-[20%]'
+                    className='absolute top-[92%] left-[30%]'
                 >
                     <Image 
                         src={'/pathfinder.svg'}
