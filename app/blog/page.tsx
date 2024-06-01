@@ -2,8 +2,13 @@
 
 import React, { useEffect, useState } from 'react';
 import { useRouter, useSearchParams } from 'next/navigation';
+import { motion } from 'framer-motion'
+
 import { BLOGS } from '@/app/data/blog';
 import BlogCard from '../components/home/BlogCard';
+
+//framer variants
+import { fadeIn, scaleCenter } from '@/framerVariants'
 
 /* import { Metadata } from 'next';
 export const metadata: Metadata = {
@@ -45,32 +50,53 @@ function BlogContent() {
     return (
         <main>
             <div className='mb-10 md:mb-[50px] sm-lg:mb-[70px] xl:mb-[100px]'>
-                <h1 className='text-center my-[30px] xsm:my-20 md:my-[50px] sm-lg:my-[90px]'>
+                <motion.h1 
+                    className='text-center my-[30px] xsm:my-20 md:my-[50px] sm-lg:my-[90px]'
+                    variants={fadeIn("up", 0.5, 0)}
+                    initial="offscreen"
+                    whileInView="onscreen"
+                    viewport={{ once: true, amount: 0 }}
+                >
                     Blog
-                </h1>
+                </motion.h1>
                 <section className=''>
                     <ul className='grid gap-[20px] md:grid-cols-2 lg:grid-cols-3'>
                         {renderBlogs()}
                     </ul>
                     <div className='mt-[60px] md:mt-[70px] sm-lg:mt-[80px] flex gap-5 justify-between items-center'>
                         {pageNumber > 1 ? (
-                            <button
+                            <motion.button
                                 className='bg-primaryBlue w-full xsm:max-w-[350px] py-3 px-[34px] text-[#f6f6f6]'
                                 onClick={goToPrevPage}
+                                variants={fadeIn("left", 0.5, 0)}
+                                initial="offscreen"
+                                whileInView="onscreen"
+                                viewport={{ once: true, amount: 0 }}
                             >
                                 Previous
-                            </button>
+                            </motion.button>
                         ) : (
                             <div className='w-full max-w-[350px]'></div>
                         )}
-                        <p>{pageNumber}/2</p>
+                        <motion.p
+                            variants={scaleCenter(0.5, 0)}
+                            initial="offscreen"
+                            whileInView="onscreen"
+                            viewport={{ once: true, amount: 0 }}
+                        >
+                            {pageNumber}/2
+                        </motion.p>
                         {pageNumber < 2 ? (
-                            <button
+                            <motion.button
                                 className='bg-primaryBlue w-full xsm:max-w-[350px] py-3 px-[34px] text-[#f6f6f6]'
                                 onClick={goToNextPage}
+                                variants={fadeIn("right", 0.5, 0)}
+                                initial="offscreen"
+                                whileInView="onscreen"
+                                viewport={{ once: true, amount: 0 }}
                             >
                                 Next
-                            </button>
+                            </motion.button>
                         ) : (
                             <div className='w-full max-w-[350px]'></div>
                         )}
